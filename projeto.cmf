@@ -1,0 +1,767 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$projeto.obj
+cinit CODE 0 7E0 7E0 20 2
+text1 CODE 0 25 25 7F 2
+text2 CODE 0 E58 E58 3B 2
+text3 CODE 0 E21 E21 37 2
+text4 CODE 0 DEE DEE 17 2
+text5 CODE 0 E05 E05 1C 2
+text6 CODE 0 D8D D8D 5 2
+text7 CODE 0 4CF 4CF 311 2
+text8 CODE 0 1D8 1D8 134 2
+text9 CODE 0 A4 A4 134 2
+text10 CODE 0 F11 F11 3F 2
+text11 CODE 0 FA0 FA0 60 2
+text12 CODE 0 F50 F50 50 2
+text13 CODE 0 ED2 ED2 3F 2
+text14 CODE 0 E93 E93 3F 2
+text15 CODE 0 DAA DAA 9 2
+text16 CODE 0 D92 D92 7 2
+text17 CODE 0 DBF DBF D 2
+text18 CODE 0 DA1 DA1 9 2
+text19 CODE 0 4 4 21 2
+text20 CODE 0 DCC DCC 11 2
+maintext CODE 0 30C 30C 1C3 2
+cstackCOMMON COMMON 1 70 70 E 1
+cstackBANK0 BANK0 1 20 20 2E 1
+inittext CODE 0 DDD DDD 11 2
+bssBANK0 BANK0 1 4E 4E 22 1
+bssBANK1 BANK1 1 A0 A0 12 1
+idataBANK1 CODE 0 DB3 DB3 C 2
+strings STRING 0 800 800 1E 2
+dataBANK1 BANK1 1 B2 B2 C 1
+clrtext CODE 0 D99 D99 8 2
+$C:\Users\giova\AppData\Local\Temp\sb0o.obj
+end_init CODE 0 0 0 3 2
+config CONFIG 0 2007 2007 2 2
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM BE-EF 1
+RAM 110-16F 1
+RAM 190-1EF 1
+BANK1 BE-EF 1
+BANK2 110-16F 1
+BANK3 190-1EF 1
+CONST 3-3 2
+CONST 81E-D8C 2
+CONST 1000-1FFF 2
+ENTRY 3-3 2
+ENTRY 81E-D8C 2
+ENTRY 1000-1FFF 2
+IDLOC 2000-2003 2
+STACK 110-16F 1
+CODE 3-3 2
+CODE 81E-D8C 2
+CODE 1000-1FFF 2
+SFR0 0-1F 1
+SFR1 80-9F 1
+SFR2 100-10F 1
+SFR3 180-18F 1
+EEDATA 2100-21FF 2
+STRCODE 3-3 2
+STRCODE 81E-D8C 2
+STRCODE 1000-1FFF 2
+STRING 3-3 2
+STRING 81E-D8C 2
+STRING 1000-1FFF 2
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$projeto.obj
+7E0 cinit CODE >860:C:\Users\giova\AppData\Local\Temp\sb0o.
+7E0 cinit CODE >863:C:\Users\giova\AppData\Local\Temp\sb0o.
+7E0 cinit CODE >982:C:\Users\giova\AppData\Local\Temp\sb0o.
+7E1 cinit CODE >983:C:\Users\giova\AppData\Local\Temp\sb0o.
+7E2 cinit CODE >984:C:\Users\giova\AppData\Local\Temp\sb0o.
+7E3 cinit CODE >985:C:\Users\giova\AppData\Local\Temp\sb0o.
+7E4 cinit CODE >986:C:\Users\giova\AppData\Local\Temp\sb0o.
+7E5 cinit CODE >987:C:\Users\giova\AppData\Local\Temp\sb0o.
+7E6 cinit CODE >988:C:\Users\giova\AppData\Local\Temp\sb0o.
+7E7 cinit CODE >989:C:\Users\giova\AppData\Local\Temp\sb0o.
+7E8 cinit CODE >990:C:\Users\giova\AppData\Local\Temp\sb0o.
+7E9 cinit CODE >991:C:\Users\giova\AppData\Local\Temp\sb0o.
+7EE cinit CODE >1010:C:\Users\giova\AppData\Local\Temp\sb0o.
+7EF cinit CODE >1011:C:\Users\giova\AppData\Local\Temp\sb0o.
+7F0 cinit CODE >1012:C:\Users\giova\AppData\Local\Temp\sb0o.
+7F1 cinit CODE >1013:C:\Users\giova\AppData\Local\Temp\sb0o.
+7F6 cinit CODE >1016:C:\Users\giova\AppData\Local\Temp\sb0o.
+7F7 cinit CODE >1017:C:\Users\giova\AppData\Local\Temp\sb0o.
+7F8 cinit CODE >1018:C:\Users\giova\AppData\Local\Temp\sb0o.
+7F9 cinit CODE >1019:C:\Users\giova\AppData\Local\Temp\sb0o.
+7FC cinit CODE >1025:C:\Users\giova\AppData\Local\Temp\sb0o.
+7FC cinit CODE >1027:C:\Users\giova\AppData\Local\Temp\sb0o.
+7FD cinit CODE >1028:C:\Users\giova\AppData\Local\Temp\sb0o.
+DCC text20 CODE >4:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\Umul8.c
+DCD text20 CODE >6:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\Umul8.c
+DCE text20 CODE >43:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\Umul8.c
+DD0 text20 CODE >44:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\Umul8.c
+DD4 text20 CODE >45:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\Umul8.c
+DD6 text20 CODE >46:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\Umul8.c
+DD8 text20 CODE >47:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\Umul8.c
+DDB text20 CODE >50:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\Umul8.c
+4 text19 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\Umul16.c
+4 text19 CODE >43:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\Umul16.c
+6 text19 CODE >45:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\Umul16.c
+8 text19 CODE >46:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\Umul16.c
+E text19 CODE >47:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\Umul16.c
+15 text19 CODE >48:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\Umul16.c
+1C text19 CODE >49:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\Umul16.c
+20 text19 CODE >52:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\Umul16.c
+DA1 text18 CODE >16:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\serial.c
+DA1 text18 CODE >18:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\serial.c
+DBF text17 CODE >21:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\serial.c
+DBF text17 CODE >23:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\serial.c
+DC4 text17 CODE >24:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\serial.c
+DC7 text17 CODE >27:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\serial.c
+DCA text17 CODE >28:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\serial.c
+DCB text17 CODE >29:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\serial.c
+D92 text16 CODE >31:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\serial.c
+D92 text16 CODE >33:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\serial.c
+D95 text16 CODE >34:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\serial.c
+D98 text16 CODE >36:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\serial.c
+DAA text15 CODE >38:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\serial.c
+DAB text15 CODE >40:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\serial.c
+DAE text15 CODE >41:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\serial.c
+DB2 text15 CODE >43:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\serial.c
+E93 text14 CODE >18:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\lcd.c
+E94 text14 CODE >21:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\lcd.c
+EA2 text14 CODE >22:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\lcd.c
+EA7 text14 CODE >24:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\lcd.c
+EAC text14 CODE >25:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\lcd.c
+EB2 text14 CODE >26:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\lcd.c
+EB9 text14 CODE >27:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\lcd.c
+EC0 text14 CODE >29:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\lcd.c
+EC7 text14 CODE >30:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\lcd.c
+ECE text14 CODE >32:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\lcd.c
+ED1 text14 CODE >33:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\lcd.c
+ED2 text13 CODE >35:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\lcd.c
+ED3 text13 CODE >38:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\lcd.c
+EE1 text13 CODE >39:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\lcd.c
+EE6 text13 CODE >41:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\lcd.c
+EEB text13 CODE >42:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\lcd.c
+EF1 text13 CODE >43:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\lcd.c
+EF8 text13 CODE >44:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\lcd.c
+EFF text13 CODE >46:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\lcd.c
+F06 text13 CODE >47:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\lcd.c
+F0D text13 CODE >49:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\lcd.c
+F10 text13 CODE >50:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\lcd.c
+F50 text12 CODE >166:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+F50 text12 CODE >169:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+F56 text12 CODE >170:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+F5F text12 CODE >171:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+F68 text12 CODE >172:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+F71 text12 CODE >175:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+F77 text12 CODE >176:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+F80 text12 CODE >177:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+F89 text12 CODE >178:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+F92 text12 CODE >181:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+F98 text12 CODE >182:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+F9F text12 CODE >183:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+FA0 text11 CODE >6:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lldiv.c
+FA0 text11 CODE >14:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lldiv.c
+FAA text11 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lldiv.c
+FB0 text11 CODE >16:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lldiv.c
+FB2 text11 CODE >17:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lldiv.c
+FB4 text11 CODE >18:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lldiv.c
+FBD text11 CODE >19:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lldiv.c
+FC1 text11 CODE >17:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lldiv.c
+FC2 text11 CODE >22:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lldiv.c
+FCB text11 CODE >23:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lldiv.c
+FDB text11 CODE >24:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lldiv.c
+FE9 text11 CODE >25:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lldiv.c
+FEA text11 CODE >27:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lldiv.c
+FF3 text11 CODE >28:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lldiv.c
+FF7 text11 CODE >30:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lldiv.c
+F11 text10 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\Umul32.c
+F11 text10 CODE >119:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\Umul32.c
+F19 text10 CODE >121:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\Umul32.c
+F1B text10 CODE >122:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\Umul32.c
+F2F text10 CODE >123:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\Umul32.c
+F38 text10 CODE >124:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\Umul32.c
+F41 text10 CODE >125:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\Umul32.c
+F47 text10 CODE >128:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\Umul32.c
+A4 text9 CODE >96:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\stepper.c
+A4 text9 CODE >101:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\stepper.c
+BC text9 CODE >103:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\stepper.c
+F9 text9 CODE >105:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\stepper.c
+111 text9 CODE >107:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\stepper.c
+115 text9 CODE >108:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\stepper.c
+12D text9 CODE >109:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\stepper.c
+12E text9 CODE >108:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\stepper.c
+13F text9 CODE >111:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\stepper.c
+141 text9 CODE >112:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\stepper.c
+159 text9 CODE >113:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\stepper.c
+15A text9 CODE >112:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\stepper.c
+16B text9 CODE >115:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\stepper.c
+16D text9 CODE >116:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\stepper.c
+185 text9 CODE >117:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\stepper.c
+186 text9 CODE >116:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\stepper.c
+197 text9 CODE >119:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\stepper.c
+199 text9 CODE >120:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\stepper.c
+1B1 text9 CODE >121:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\stepper.c
+1B2 text9 CODE >120:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\stepper.c
+1C3 text9 CODE >105:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\stepper.c
+1D4 text9 CODE >124:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\stepper.c
+1D7 text9 CODE >125:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\stepper.c
+1D8 text8 CODE >65:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\stepper.c
+1D8 text8 CODE >70:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\stepper.c
+1F0 text8 CODE >72:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\stepper.c
+22D text8 CODE >74:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\stepper.c
+245 text8 CODE >76:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\stepper.c
+249 text8 CODE >77:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\stepper.c
+261 text8 CODE >78:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\stepper.c
+262 text8 CODE >77:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\stepper.c
+273 text8 CODE >80:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\stepper.c
+275 text8 CODE >81:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\stepper.c
+28D text8 CODE >82:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\stepper.c
+28E text8 CODE >81:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\stepper.c
+29F text8 CODE >84:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\stepper.c
+2A1 text8 CODE >85:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\stepper.c
+2B9 text8 CODE >86:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\stepper.c
+2BA text8 CODE >85:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\stepper.c
+2CB text8 CODE >88:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\stepper.c
+2CD text8 CODE >89:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\stepper.c
+2E5 text8 CODE >90:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\stepper.c
+2E6 text8 CODE >89:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\stepper.c
+2F7 text8 CODE >74:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\stepper.c
+308 text8 CODE >93:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\stepper.c
+30B text8 CODE >94:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\stepper.c
+4CF text7 CODE >185:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+4D2 text7 CODE >187:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+4DC text7 CODE >190:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+4E2 text7 CODE >192:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+51C text7 CODE >194:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+520 text7 CODE >196:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+553 text7 CODE >201:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+55B text7 CODE >202:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+56A text7 CODE >203:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+585 text7 CODE >204:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+5E0 text7 CODE >205:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+600 text7 CODE >207:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+61E text7 CODE >208:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+61F text7 CODE >209:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+63A text7 CODE >210:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+64C text7 CODE >212:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+65B text7 CODE >213:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+65C text7 CODE >214:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+65D text7 CODE >215:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+661 text7 CODE >218:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+670 text7 CODE >219:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+68B text7 CODE >220:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+6E6 text7 CODE >221:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+706 text7 CODE >223:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+724 text7 CODE >224:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+725 text7 CODE >225:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+740 text7 CODE >226:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+752 text7 CODE >228:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+761 text7 CODE >229:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+762 text7 CODE >230:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+763 text7 CODE >231:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+767 text7 CODE >235:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+76B text7 CODE >237:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+7A0 text7 CODE >238:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+7A1 text7 CODE >239:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+7A7 text7 CODE >241:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+7DC text7 CODE >244:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+7DF text7 CODE >245:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+D8D text6 CODE >52:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\lcd.c
+D8D text6 CODE >54:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\lcd.c
+D91 text6 CODE >55:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\lcd.c
+E05 text5 CODE >13:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\lcd.c
+E06 text5 CODE >15:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\lcd.c
+DEE text4 CODE >5:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\lcd.c
+DEE text4 CODE >7:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\lcd.c
+DF4 text4 CODE >8:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\lcd.c
+DFA text4 CODE >9:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\lcd.c
+E00 text4 CODE >10:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\lcd.c
+E04 text4 CODE >11:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\lcd.c
+E21 text3 CODE >4:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\serial.c
+E21 text3 CODE >6:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\serial.c
+E4E text3 CODE >7:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\serial.c
+E52 text3 CODE >11:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\serial.c
+E55 text3 CODE >12:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\serial.c
+E56 text3 CODE >13:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\serial.c
+E57 text3 CODE >14:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\serial.c
+E58 text2 CODE >16:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\stepper.c
+E58 text2 CODE >19:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\stepper.c
+E62 text2 CODE >20:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\stepper.c
+E6C text2 CODE >21:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\stepper.c
+E76 text2 CODE >24:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\stepper.c
+E80 text2 CODE >25:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\stepper.c
+E8A text2 CODE >28:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\stepper.c
+E8E text2 CODE >29:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\stepper.c
+E92 text2 CODE >30:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\stepper.c
+25 text1 CODE >47:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\stepper.c
+25 text1 CODE >50:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\stepper.c
+36 text1 CODE >52:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\stepper.c
+58 text1 CODE >53:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\stepper.c
+7C text1 CODE >55:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\stepper.c
+84 text1 CODE >57:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\stepper.c
+8C text1 CODE >58:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\stepper.c
+96 text1 CODE >61:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\stepper.c
+9C text1 CODE >62:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\stepper.c
+A3 text1 CODE >63:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\stepper.c
+30C maintext CODE >57:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+30C maintext CODE >60:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+30F maintext CODE >63:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+312 maintext CODE >66:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+315 maintext CODE >69:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+316 maintext CODE >70:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+317 maintext CODE >71:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+318 maintext CODE >72:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+319 maintext CODE >73:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+31C maintext CODE >76:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+31F maintext CODE >77:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+320 maintext CODE >78:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+321 maintext CODE >79:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+322 maintext CODE >80:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+323 maintext CODE >83:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+328 maintext CODE >84:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+337 maintext CODE >85:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+33C maintext CODE >87:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+342 maintext CODE >88:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+351 maintext CODE >90:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+356 maintext CODE >93:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+359 maintext CODE >94:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+35A maintext CODE >95:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+35C maintext CODE >96:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+360 maintext CODE >97:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+363 maintext CODE >98:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+366 maintext CODE >100:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+36C maintext CODE >104:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+373 maintext CODE >105:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+376 maintext CODE >108:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+37C maintext CODE >109:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+382 maintext CODE >110:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+388 maintext CODE >111:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+38E maintext CODE >112:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+394 maintext CODE >113:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+39A maintext CODE >114:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+3A0 maintext CODE >115:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+3A6 maintext CODE >120:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+3AD maintext CODE >123:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+3B1 maintext CODE >125:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+3B6 maintext CODE >126:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+3BA maintext CODE >127:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+3BA maintext CODE >132:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+3BC maintext CODE >135:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+3C0 maintext CODE >136:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+3C8 maintext CODE >140:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+3DB maintext CODE >141:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+412 maintext CODE >143:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+416 maintext CODE >144:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+426 maintext CODE >146:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+465 maintext CODE >147:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+467 maintext CODE >149:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+477 maintext CODE >151:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+4B6 maintext CODE >152:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+4BC maintext CODE >156:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+4C2 maintext CODE >159:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+4CC maintext CODE >160:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+4CD maintext CODE >161:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+4CE maintext CODE >117:C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\Main.c
+D99 clrtext CODE >997:C:\Users\giova\AppData\Local\Temp\sb0o.
+D99 clrtext CODE >998:C:\Users\giova\AppData\Local\Temp\sb0o.
+D9A clrtext CODE >999:C:\Users\giova\AppData\Local\Temp\sb0o.
+D9A clrtext CODE >1000:C:\Users\giova\AppData\Local\Temp\sb0o.
+D9B clrtext CODE >1001:C:\Users\giova\AppData\Local\Temp\sb0o.
+D9C clrtext CODE >1002:C:\Users\giova\AppData\Local\Temp\sb0o.
+D9D clrtext CODE >1003:C:\Users\giova\AppData\Local\Temp\sb0o.
+D9E clrtext CODE >1004:C:\Users\giova\AppData\Local\Temp\sb0o.
+D9F clrtext CODE >1005:C:\Users\giova\AppData\Local\Temp\sb0o.
+DA0 clrtext CODE >1006:C:\Users\giova\AppData\Local\Temp\sb0o.
+DDD inittext CODE >956:C:\Users\giova\AppData\Local\Temp\sb0o.
+DDD inittext CODE >957:C:\Users\giova\AppData\Local\Temp\sb0o.
+DDE inittext CODE >958:C:\Users\giova\AppData\Local\Temp\sb0o.
+DDF inittext CODE >959:C:\Users\giova\AppData\Local\Temp\sb0o.
+DE0 inittext CODE >960:C:\Users\giova\AppData\Local\Temp\sb0o.
+DE1 inittext CODE >967:C:\Users\giova\AppData\Local\Temp\sb0o.
+DE1 inittext CODE >968:C:\Users\giova\AppData\Local\Temp\sb0o.
+DE4 inittext CODE >969:C:\Users\giova\AppData\Local\Temp\sb0o.
+DE5 inittext CODE >970:C:\Users\giova\AppData\Local\Temp\sb0o.
+DE6 inittext CODE >971:C:\Users\giova\AppData\Local\Temp\sb0o.
+DE7 inittext CODE >972:C:\Users\giova\AppData\Local\Temp\sb0o.
+DE8 inittext CODE >973:C:\Users\giova\AppData\Local\Temp\sb0o.
+DE9 inittext CODE >974:C:\Users\giova\AppData\Local\Temp\sb0o.
+DEA inittext CODE >975:C:\Users\giova\AppData\Local\Temp\sb0o.
+DEB inittext CODE >976:C:\Users\giova\AppData\Local\Temp\sb0o.
+DEC inittext CODE >977:C:\Users\giova\AppData\Local\Temp\sb0o.
+DED inittext CODE >978:C:\Users\giova\AppData\Local\Temp\sb0o.
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+_i A4 0 BANK1 1 bssBANK1 projeto.obj
+_j 4E 0 BANK0 1 bssBANK0 projeto.obj
+_p A0 0 BANK1 1 bssBANK1 projeto.obj
+___latbits 2 0 ABS 0 - projeto.obj
+__LdataBANK1 0 0 ABS 0 dataBANK1 -
+__end_of_serialStop 1B32 0 CODE 0 text16 projeto.obj
+__end_of_serialWait 1B54 0 CODE 0 text18 projeto.obj
+__Hspace_0 2009 0 ABS 0 - -
+__Hspace_1 BE 0 ABS 0 - -
+__Hspace_2 0 0 ABS 0 - -
+__Hspace_3 0 0 ABS 0 - -
+__HidataBANK1 0 0 ABS 0 idataBANK1 -
+__Heeprom_data 0 0 EEDATA 3 eeprom_data -
+__CFG_MCLRE$ON 0 0 ABS 0 - projeto.obj
+_p1 6D 0 BANK0 1 bssBANK0 projeto.obj
+_p2 6C 0 BANK0 1 bssBANK0 projeto.obj
+_p3 66 0 BANK0 1 bssBANK0 projeto.obj
+__Hstrings 0 0 ABS 0 strings -
+_nibbleinf 64 0 BANK0 1 bssBANK0 projeto.obj
+_nibblesup 65 0 BANK0 1 bssBANK0 projeto.obj
+__size_of_setupStepper 0 0 ABS 0 - projeto.obj
+_PIR1 C 0 ABS 0 - projeto.obj
+___sp 0 0 STACK 2 stack C:\Users\giova\AppData\Local\Temp\sb0o.obj
+_ang1 6F 0 BANK0 1 bssBANK0 projeto.obj
+_ang2 6E 0 BANK0 1 bssBANK0 projeto.obj
+_ang3 67 0 BANK0 1 bssBANK0 projeto.obj
+_main 618 0 CODE 0 maintext projeto.obj
+btemp 7E 0 ABS 0 - projeto.obj
+start 0 0 CODE 0 init C:\Users\giova\AppData\Local\Temp\sb0o.obj
+__size_of_main 0 0 ABS 0 - projeto.obj
+__size_of___lldiv 0 0 ABS 0 - projeto.obj
+_displaySendString 1C0A 0 CODE 0 text5 projeto.obj
+?___lmul 70 0 COMMON 1 cstackCOMMON projeto.obj
+?___wmul 70 0 COMMON 1 cstackCOMMON projeto.obj
+__LidataBANK1 0 0 ABS 0 idataBANK1 -
+__Hpowerup 0 0 CODE 0 powerup -
+__end_of_setupStepper 1D26 0 CODE 0 text2 projeto.obj
+intlevel0 0 0 ENTRY 0 functab C:\Users\giova\AppData\Local\Temp\sb0o.obj
+intlevel1 0 0 ENTRY 0 functab C:\Users\giova\AppData\Local\Temp\sb0o.obj
+intlevel2 0 0 ENTRY 0 functab C:\Users\giova\AppData\Local\Temp\sb0o.obj
+intlevel3 0 0 ENTRY 0 functab C:\Users\giova\AppData\Local\Temp\sb0o.obj
+intlevel4 0 0 ENTRY 0 functab C:\Users\giova\AppData\Local\Temp\sb0o.obj
+intlevel5 0 0 ENTRY 0 functab C:\Users\giova\AppData\Local\Temp\sb0o.obj
+__end_of_sentido_anti_horario_wave_step 3B0 0 CODE 0 text9 projeto.obj
+___bmul@multiplicand 70 0 COMMON 1 cstackCOMMON projeto.obj
+wtemp0 7E 0 ABS 0 - projeto.obj
+__Hfunctab 0 0 ENTRY 0 functab -
+__end_of_displaySendData 1E22 0 CODE 0 text13 projeto.obj
+__Hclrtext 0 0 ABS 0 clrtext -
+___wmul@multiplicand 72 0 COMMON 1 cstackCOMMON projeto.obj
+_ADCON0 1F 0 ABS 0 - projeto.obj
+_ADCON1 9F 0 ABS 0 - projeto.obj
+_ADRESH 1E 0 ABS 0 - projeto.obj
+_ADRESL 9E 0 ABS 0 - projeto.obj
+_ANSELH 189 0 ABS 0 - projeto.obj
+__size_of_displaySendCmd 0 0 ABS 0 - projeto.obj
+_velocidade BA 0 BANK1 1 dataBANK1 projeto.obj
+__end_of___bmul 1BBA 0 CODE 0 text20 projeto.obj
+__end_of___lmul 1EA0 0 CODE 0 text10 projeto.obj
+__end_of___wmul 4A 0 CODE 0 text19 projeto.obj
+_setupSerial 1C42 0 CODE 0 text3 projeto.obj
+__Lmaintext 0 0 ABS 0 maintext -
+___bmul@multiplier 73 0 COMMON 1 cstackCOMMON projeto.obj
+__end_of___lldiv 2000 0 CODE 0 text11 projeto.obj
+displaySendData@data_l 74 0 COMMON 1 cstackCOMMON projeto.obj
+displaySendData@data_u 75 0 COMMON 1 cstackCOMMON projeto.obj
+sentido_horario_wave_step@F1713 B6 0 BANK1 1 dataBANK1 projeto.obj
+_displaySendData 1DA4 0 CODE 0 text13 projeto.obj
+_posicaoAtual 62 0 BANK0 1 bssBANK0 projeto.obj
+__size_of_veloc 0 0 ABS 0 - projeto.obj
+___lldiv@counter 2C 0 BANK0 1 cstackBANK0 projeto.obj
+start_initialization FC0 0 CODE 0 cinit projeto.obj
+__size_of_serialStop 0 0 ABS 0 - projeto.obj
+__size_of_serialWait 0 0 ABS 0 - projeto.obj
+displaySendData@data 73 0 COMMON 1 cstackCOMMON projeto.obj
+_TRISAbits 85 0 ABS 0 - projeto.obj
+_TRISBbits 86 0 ABS 0 - projeto.obj
+_TRISCbits 87 0 ABS 0 - projeto.obj
+_TRISDbits 88 0 ABS 0 - projeto.obj
+___lldiv@dividend 24 0 BANK0 1 cstackBANK0 projeto.obj
+__end_of_sentido_horario_wave_step 618 0 CODE 0 text8 projeto.obj
+_setupDisplay 1BDC 0 CODE 0 text4 projeto.obj
+displaySendCmd@data 73 0 COMMON 1 cstackCOMMON projeto.obj
+clear_ram0 1B32 0 CODE 0 clrtext projeto.obj
+_sentido_anti_horario_wave_step 148 0 CODE 0 text9 projeto.obj
+__pcstackBANK0 20 0 BANK0 1 cstackBANK0 projeto.obj
+_SSPADD 93 0 ABS 0 - projeto.obj
+_SSPBUF 13 0 ABS 0 - projeto.obj
+_SSPCON 14 0 ABS 0 - projeto.obj
+serialWrite@data 70 0 COMMON 1 cstackCOMMON projeto.obj
+__end_of_serialStart 1B98 0 CODE 0 text17 projeto.obj
+__end_of_serialWrite 1B66 0 CODE 0 text15 projeto.obj
+__end_of_apresenta 1F40 0 CODE 0 text12 projeto.obj
+__size_of_apresenta 0 0 ABS 0 - projeto.obj
+___int_sp 0 0 STACK 2 stack C:\Users\giova\AppData\Local\Temp\sb0o.obj
+__Hbank0 0 0 ABS 0 bank0 -
+__Hbank1 0 0 ABS 0 bank1 -
+__Hbank2 0 0 ABS 0 bank2 -
+__Hbank3 0 0 ABS 0 bank3 -
+__Hcinit 1000 0 CODE 0 cinit -
+__Hidloc 0 0 IDLOC 0 idloc -
+__Hstack 0 0 STACK 2 stack -
+__stringbase 100A 0 STRING 0 strings projeto.obj
+__Hmaintext 0 0 ABS 0 maintext -
+__Hcommon 0 0 ABS 0 common -
+__Hconfig 4012 0 CONFIG 0 config -
+_apresenta 1EA0 0 CODE 0 text12 projeto.obj
+__Lbank0 0 0 ABS 0 bank0 -
+__Lbank1 0 0 ABS 0 bank1 -
+__Lbank2 0 0 ABS 0 bank2 -
+__Lbank3 0 0 ABS 0 bank3 -
+__Lcinit FC0 0 CODE 0 cinit -
+sentido_horario_wave_step@move_horario 35 0 BANK0 1 cstackBANK0 projeto.obj
+__Lidloc 0 0 IDLOC 0 idloc -
+__Lstack 0 0 STACK 2 stack -
+_clearDisplay 1B1A 0 CODE 0 text6 projeto.obj
+_calculaDelta 99E 0 CODE 0 text7 projeto.obj
+__size_of_setupDisplay 0 0 ABS 0 - projeto.obj
+__Linittext 0 0 ABS 0 inittext -
+_PORTBbits 6 0 ABS 0 - projeto.obj
+_PORTDbits 8 0 ABS 0 - projeto.obj
+__size_of_displaySendData 0 0 ABS 0 - projeto.obj
+__Habs1 0 0 ABS 0 abs1 -
+__Hcode 0 0 ABS 0 code -
+__Hinit 0 0 CODE 0 init -
+__Hsfr0 0 0 ABS 0 sfr0 -
+__Hsfr1 0 0 ABS 0 sfr1 -
+__Hsfr2 0 0 ABS 0 sfr2 -
+__Hsfr3 0 0 ABS 0 sfr3 -
+__Htext 0 0 ABS 0 text -
+__Labs1 0 0 ABS 0 abs1 -
+__Lcode 0 0 ABS 0 code -
+__Linit 0 0 CODE 0 init -
+__Lsfr0 0 0 ABS 0 sfr0 -
+__Lsfr1 0 0 ABS 0 sfr1 -
+__Lsfr2 0 0 ABS 0 sfr2 -
+__Lsfr3 0 0 ABS 0 sfr3 -
+__Ltext 0 0 ABS 0 text -
+___bmul 1B98 0 CODE 0 text20 projeto.obj
+___lmul 1E22 0 CODE 0 text10 projeto.obj
+___wmul 8 0 CODE 0 text19 projeto.obj
+__LcstackBANK0 0 0 ABS 0 cstackBANK0 -
+__HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+__S0 2009 0 ABS 0 - -
+__S1 BE 0 ABS 0 - -
+__S2 0 0 ABS 0 - -
+__S3 0 0 ABS 0 - -
+_div 5E 0 BANK0 1 bssBANK0 projeto.obj
+__CFG_BOR4V$BOR40V 0 0 ABS 0 - projeto.obj
+_angulo A8 0 BANK1 1 bssBANK1 projeto.obj
+__size_of_sentido_horario_wave_step 0 0 ABS 0 - projeto.obj
+__end_of_setupDisplay 1C0A 0 CODE 0 text4 projeto.obj
+__CFG_FOSC$INTRC_NOCLKOUT 0 0 ABS 0 - projeto.obj
+_angulo_atual 52 0 BANK0 1 bssBANK0 projeto.obj
+__size_of_clearDisplay 0 0 ABS 0 - projeto.obj
+__size_of_calculaDelta 0 0 ABS 0 - projeto.obj
+__CFG_BOREN$ON 0 0 ABS 0 - projeto.obj
+__Lintentry 0 0 CODE 0 intentry -
+___lldiv@divisor 20 0 BANK0 1 cstackBANK0 projeto.obj
+__stringtab 1000 0 STRING 0 strings projeto.obj
+reset_vec 0 0 CODE 0 reset_vec C:\Users\giova\AppData\Local\Temp\sb0o.obj
+__pdataBANK1 B2 0 BANK1 1 dataBANK1 projeto.obj
+__size_of___bmul 0 0 ABS 0 - projeto.obj
+__size_of___lmul 0 0 ABS 0 - projeto.obj
+__size_of___wmul 0 0 ABS 0 - projeto.obj
+__LbssBANK0 0 0 ABS 0 bssBANK0 -
+__LbssBANK1 0 0 ABS 0 bssBANK1 -
+__CFG_FCMEN$ON 0 0 ABS 0 - projeto.obj
+__end_of_clearDisplay 1B24 0 CODE 0 text6 projeto.obj
+__end_of_calculaDelta FC0 0 CODE 0 text7 projeto.obj
+__ptext10 1E22 0 CODE 0 text10 projeto.obj
+__ptext11 1F40 0 CODE 0 text11 projeto.obj
+__ptext12 1EA0 0 CODE 0 text12 projeto.obj
+__ptext13 1DA4 0 CODE 0 text13 projeto.obj
+__ptext14 1D26 0 CODE 0 text14 projeto.obj
+__ptext15 1B54 0 CODE 0 text15 projeto.obj
+__ptext16 1B24 0 CODE 0 text16 projeto.obj
+__ptext17 1B7E 0 CODE 0 text17 projeto.obj
+__ptext18 1B42 0 CODE 0 text18 projeto.obj
+__ptext19 8 0 CODE 0 text19 projeto.obj
+__ptext20 1B98 0 CODE 0 text20 projeto.obj
+___lldiv 1F40 0 CODE 0 text11 projeto.obj
+__pmaintext 618 0 CODE 0 maintext projeto.obj
+___lmul@multiplier 70 0 COMMON 1 cstackCOMMON projeto.obj
+__Lcommon 0 0 ABS 0 common -
+__Lconfig 400E 0 CONFIG 0 config -
+__CFG_CP$OFF 0 0 ABS 0 - projeto.obj
+__size_of_serialStart 0 0 ABS 0 - projeto.obj
+__size_of_serialWrite 0 0 ABS 0 - projeto.obj
+__end_of_setupSerial 1CB0 0 CODE 0 text3 projeto.obj
+__CFG_IESO$ON 0 0 ABS 0 - projeto.obj
+__CFG_WDTE$OFF 0 0 ABS 0 - projeto.obj
+__Hinittext 0 0 ABS 0 inittext -
+___wmul@multiplier 70 0 COMMON 1 cstackCOMMON projeto.obj
+_displaySendCmd 1D26 0 CODE 0 text14 projeto.obj
+sentido_anti_horario_wave_step@move_anti_horario 35 0 BANK0 1 cstackBANK0 projeto.obj
+__size_of_displaySendString 0 0 ABS 0 - projeto.obj
+stackhi 0 0 ABS 0 - C:\Users\giova\AppData\Local\Temp\sb0o.obj
+stacklo 0 0 ABS 0 - C:\Users\giova\AppData\Local\Temp\sb0o.obj
+main@polaridade 4D 0 BANK0 1 cstackBANK0 projeto.obj
+displaySendString@str 77 0 COMMON 1 cstackCOMMON projeto.obj
+__end_of__stringtab 100C 0 STRING 0 strings projeto.obj
+__CFG_LVP$OFF 0 0 ABS 0 - projeto.obj
+__Lspace_0 0 0 ABS 0 - -
+__Lspace_1 0 0 ABS 0 - -
+__Lspace_2 0 0 ABS 0 - -
+__Lspace_3 0 0 ABS 0 - -
+setupSerial@clock 2D 0 BANK0 1 cstackBANK0 projeto.obj
+init_fetch0 1BBA 0 CODE 0 inittext projeto.obj
+__HcstackBANK0 0 0 ABS 0 cstackBANK0 -
+_PIR1bits C 0 ABS 0 - projeto.obj
+__Lend_init 0 0 CODE 0 end_init -
+_sentido_horario_wave_step 3B0 0 CODE 0 text8 projeto.obj
+__LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+end_of_initialization FF8 0 CODE 0 cinit projeto.obj
+__Hintentry 0 0 CODE 0 intentry -
+__Lstrings 0 0 ABS 0 strings -
+?___lldiv 20 0 BANK0 1 cstackBANK0 projeto.obj
+__Hreset_vec 0 0 CODE 0 reset_vec -
+__HbssBANK0 0 0 ABS 0 bssBANK0 -
+__HbssBANK1 0 0 ABS 0 bssBANK1 -
+_valor_anterior 5A 0 BANK0 1 bssBANK0 projeto.obj
+__end_of_displaySendCmd 1DA4 0 CODE 0 text14 projeto.obj
+__ptext1 4A 0 CODE 0 text1 projeto.obj
+__ptext2 1CB0 0 CODE 0 text2 projeto.obj
+__ptext3 1C42 0 CODE 0 text3 projeto.obj
+__ptext4 1BDC 0 CODE 0 text4 projeto.obj
+__ptext5 1C0A 0 CODE 0 text5 projeto.obj
+__ptext6 1B1A 0 CODE 0 text6 projeto.obj
+__ptext7 99E 0 CODE 0 text7 projeto.obj
+__ptext8 3B0 0 CODE 0 text8 projeto.obj
+__ptext9 148 0 CODE 0 text9 projeto.obj
+__Lpowerup 0 0 CODE 0 powerup -
+__Leeprom_data 0 0 EEDATA 3 eeprom_data -
+calculaDelta@polaridade 44 0 BANK0 1 cstackBANK0 projeto.obj
+__Lreset_vec 0 0 CODE 0 reset_vec -
+__end_of__initialization FF8 0 CODE 0 cinit projeto.obj
+__Lfunctab 0 0 ENTRY 0 functab -
+__pidataBANK1 1B66 0 CODE 0 idataBANK1 projeto.obj
+__Lclrtext 0 0 ABS 0 clrtext -
+___lmul@product 79 0 COMMON 1 cstackCOMMON projeto.obj
+___lmul@multiplicand 74 0 COMMON 1 cstackCOMMON projeto.obj
+_serialStop 1B24 0 CODE 0 text16 projeto.obj
+_serialWait 1B42 0 CODE 0 text18 projeto.obj
+_ANSELbits 188 0 ABS 0 - projeto.obj
+___lldiv@quotient 28 0 BANK0 1 cstackBANK0 projeto.obj
+__pcstackCOMMON 70 0 COMMON 1 cstackCOMMON projeto.obj
+__end_of_displaySendString 1C42 0 CODE 0 text5 projeto.obj
+sentido_anti_horario_wave_step@g 2D 0 BANK0 1 cstackBANK0 projeto.obj
+sentido_anti_horario_wave_step@x 31 0 BANK0 1 cstackBANK0 projeto.obj
+_SSPCON2 91 0 ABS 0 - projeto.obj
+_SSPSTAT 94 0 ABS 0 - projeto.obj
+__Hend_init 6 0 CODE 0 end_init -
+init_ram0 1BC2 0 CODE 0 inittext projeto.obj
+__end_of_main 99E 0 CODE 0 maintext projeto.obj
+__size_of_setupSerial 0 0 ABS 0 - projeto.obj
+displaySendCmd@data_l 74 0 COMMON 1 cstackCOMMON projeto.obj
+displaySendCmd@data_u 75 0 COMMON 1 cstackCOMMON projeto.obj
+__size_of_sentido_anti_horario_wave_step 0 0 ABS 0 - projeto.obj
+_PORTD 8 0 ABS 0 - projeto.obj
+__end_of_veloc 148 0 CODE 0 text1 projeto.obj
+__Hram 0 0 ABS 0 ram -
+__Lram 0 0 ABS 0 ram -
+_delta AC 0 BANK1 1 bssBANK1 projeto.obj
+__CFG_CPD$OFF 0 0 ABS 0 - projeto.obj
+_valor 68 0 BANK0 1 bssBANK0 projeto.obj
+_veloc 4A 0 CODE 0 text1 projeto.obj
+sentido_anti_horario_wave_step@F1722 B2 0 BANK1 1 dataBANK1 projeto.obj
+__HdataBANK1 0 0 ABS 0 dataBANK1 -
+_posicaoDesejada B0 0 BANK1 1 bssBANK1 projeto.obj
+_contador 56 0 BANK0 1 bssBANK0 projeto.obj
+__initialization FC0 0 CODE 0 cinit projeto.obj
+___bmul@product 72 0 COMMON 1 cstackCOMMON projeto.obj
+__CFG_PWRTE$OFF 0 0 ABS 0 - projeto.obj
+_setupStepper 1CB0 0 CODE 0 text2 projeto.obj
+__pbssBANK0 4E 0 BANK0 1 bssBANK0 projeto.obj
+__pbssBANK1 A0 0 BANK1 1 bssBANK1 projeto.obj
+__CFG_WRT$OFF 0 0 ABS 0 - projeto.obj
+_serialStart 1B7E 0 CODE 0 text17 projeto.obj
+_serialWrite 1B54 0 CODE 0 text15 projeto.obj
+__pstrings 1000 0 STRING 0 strings projeto.obj
+___wmul@product 74 0 COMMON 1 cstackCOMMON projeto.obj
+sentido_horario_wave_step@g 2D 0 BANK0 1 cstackBANK0 projeto.obj
+sentido_horario_wave_step@x 31 0 BANK0 1 cstackBANK0 projeto.obj
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+- 1 7E 2
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+cinit 0 7E0 FC0 20 2
+text1 0 25 4A 7F 2
+text2 0 E58 1CB0 3B 2
+text3 0 E21 1C42 37 2
+text4 0 DEE 1BDC 17 2
+text5 0 E05 1C0A 1C 2
+text6 0 D8D 1B1A 5 2
+text7 0 4CF 99E 311 2
+text8 0 1D8 3B0 134 2
+text9 0 A4 148 134 2
+text10 0 F11 1E22 3F 2
+text11 0 FA0 1F40 60 2
+text12 0 F50 1EA0 50 2
+text13 0 ED2 1DA4 3F 2
+text14 0 E93 1D26 3F 2
+text15 0 DAA 1B54 9 2
+text16 0 D92 1B24 7 2
+text17 0 DBF 1B7E D 2
+text18 0 DA1 1B42 9 2
+text19 0 4 8 21 2
+text20 0 DCC 1B98 11 2
+maintext 0 30C 618 1C3 2
+cstackCOMMON 1 70 70 E 1
+cstackBANK0 1 20 20 50 1
+inittext 0 DDD 1BBA 11 2
+reset_vec 0 0 0 3 2
+bssBANK1 1 A0 A0 1E 1
+idataBANK1 0 DB3 1B66 C 2
+strings 0 800 1000 1E 2
+clrtext 0 D99 1B32 8 2
+config 0 2007 400E 2 2

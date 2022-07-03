@@ -1,3 +1,8 @@
+# XC8 and MPLAB files
+*.p1
+*.dep
+*.pre
+
 # Prerequisites
 *.d
 
