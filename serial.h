@@ -2,22 +2,11 @@
 #include <xc.h>
 #include <stdint.h>
 
-#define SLAVE_ADDRESS_LCD 0x4E // definindo o endereço do escravo
+// Inicializa e configura a comunicação serial assíncrona (UART)
+void setupSerial(uint16_t baudrate);
 
-// Inicializa as configurações como MESTRE e habilita
-// os barramentos SDA e SCL
-void setupSerial(const unsigned long clock);
+// Retonar um caractere vindo pela comunicação serial (RX)
+char getChar(void);
 
-// Espera a transmissão de dados acabar
-void serialWait(void);
-
-// Habilita o transporte de dados
-void serialStart(void);
-
-// Para a transmissão de dados
-void serialStop(void);
-
-// Enviar um dado
-void serialWrite(uint8_t data);
-
-
+// Envia um caractere através da comunicação serial (TX)
+void sendChar(char ch);

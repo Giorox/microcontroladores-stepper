@@ -30,7 +30,6 @@ file_002=.
 file_003=.
 file_004=.
 file_005=.
-file_006=.
 [GENERATED_FILES]
 file_000=no
 file_001=no
@@ -38,7 +37,6 @@ file_002=no
 file_003=no
 file_004=no
 file_005=no
-file_006=no
 [OTHER_FILES]
 file_000=no
 file_001=no
@@ -46,20 +44,18 @@ file_002=no
 file_003=no
 file_004=no
 file_005=no
-file_006=no
 [FILE_INFO]
-file_000=lcd.c
-file_001=Main.c
-file_002=serial.c
-file_003=stepper.c
-file_004=lcd.h
-file_005=serial.h
-file_006=stepper.h
+file_000=main.c
+file_001=serial.c
+file_002=lcd.c
+file_003=lcd.h
+file_004=serial.h
+file_005=stepper.h
 [SUITE_INFO]
 suite_guid={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
 suite_state=
 [TOOL_SETTINGS]
-TS{F42384DA-C7ED-4A02-880F-0F5E88735CE2}=C9=1 FE=31 EC=1 F0=0 EF=1 EE=0 104=0 E9= C4=0 F2= F3= F4= F8=1 F5= F9=0 FA=0 FB=0 C0=0 C1=0 BD=0 BC=0 BB=0 BF=0 BE=0 B8= 101=0 103= 102=0 BA= FF=0 100=0 106=0 109=0 10A=1 10B=0 10C=0 10E=0 10F=0 110=1 118=0 116=0 117= 10D=0 114=-1 113=-1 111=0 115=-1 
+TS{F42384DA-C7ED-4A02-880F-0F5E88735CE2}= C9=1
 TS{F42384DA-C7ED-4A02-880F-0F5E88735CE2}_alt=yes
 [INSTRUMENTED_TRACE]
 enable=0

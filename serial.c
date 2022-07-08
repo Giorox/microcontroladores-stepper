@@ -1,43 +1,27 @@
 //serial.c
 #include "serial.h"
 
-void setupSerial(const unsigned long clock)
+void setupSerial(uint16_t baudrate)
 {
-	SSPADD = (4000000/(4*clock))-1; // velocidade de amostragem 
-    SSPCON = 0b00101000;     		
-	// primeiros  4 bits é do modo mestre de I2c,
-	// 6º bit é SSPEN que habilita a linha scl e sda
+	unsigned long FOSC = 4000000;
+	TXSTA = 0x20; //BRGH=0, TXEN = 1, 8-bit mode, Asynchronous Mode
+    RCSTA = 0b10010000; //Serial Port enabled,8-bit reception
 
-    SSPSTAT = 0; 
-    TRISCbits.TRISC3 = 1;
-    TRISCbits.TRISC4 = 1;			// definindo como entrada
-}
-
-void serialWait(void)
-{
-	while ((SSPSTAT & 0x04) || (SSPCON2 & 0x1F));
-}
-
-void serialStart(void)
-{
-	serialWait();
-    SSPCON2 |= 0x01; 
-	// SEN=1 -> da start no sda e scl
+	// Solve for baudrate considering FOSC = 4MHz	
+    SPBRG = ((FOSC/baudrate)/64) - 1;
     
-	while(!PIR1bits.SSPIF);
-    PIR1bits.SSPIF = 0;
+	TXIF=RCIF=0; // Set TX and RX buffers to 0
 }
 
-void serialStop(void)
+void sendChar(char ch)
 {
-	serialWait();
-    SSPCON2 |= 0x04; 
-	// PEN=1 -> pausa a operação de SDA e SCL 
+    TXREG = ch; // Set char value to the transmit buffer
+    while(!TXIF); // Wait until the transmit interruption is set
+    TXIF = 0; // Reset the interruption and finish
 }
-
-void serialWrite(uint8_t data)
+char getChar()
 {
-	serialWait();
-    SSPBUF = data;  
-	// Manda a infromação para o registrador SSPBUF (buffer)
+    while(!RCIF);  // Wait until the receive interruption is set
+    RCIF = 0;  // Reset the interruption
+    return RCREG;  // Return the value contained in the receive buffer
 }
