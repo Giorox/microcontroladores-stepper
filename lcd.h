@@ -9,8 +9,13 @@ void setupDisplay(void);
 void clearDisplay(void);
 
 // Escreve um único caractere no display LCD
-void sendChar(char ch);
+// equivalente a sendChar() como especificado no requisito
+// nome trocado para não dar problema de "reimplementação"
+void sendCharToLCD(char ch);
 
 // Escolhe posição do cursor no LCD
 void setCursor(uint8_t linha, uint8_t coluna);
+
+// Função para enviar algum comando para o LCD
+void sendCommand(char cmd);
 

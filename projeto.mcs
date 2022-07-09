@@ -11,7 +11,7 @@ LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.45\bin\xc8.exe
 PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
 SOLK=<src>|main.c|serial.c||<obj>||<lib>||<lkr>||
 SuiteArgsString=
-ToolArgsString= C9=1
+ToolArgsString=C9=1
 TraceCmdString=
 DebugOptions=
 [File001]
@@ -24,10 +24,49 @@ LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.45\bin\xc8.exe
 PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
 SOLK=<src>|main.c|serial.c||<obj>||<lib>||<lkr>||
 SuiteArgsString=
-ToolArgsString= C9=1
+ToolArgsString=C9=1
 TraceCmdString=
 DebugOptions=
 [File002]
+Location=C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\main.p1
+Folder=Intermediary
+DeviceName=PIC16F887
+LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
+LanguageToolID={B6D1F1C2-3E8A-49F6-9C0A-75F5EBE32222}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.45\bin\xc8.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|main.c|serial.c|lcd.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=1
+TraceCmdString=
+DebugOptions=
+[File003]
+Location=C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\serial.p1
+Folder=Intermediary
+DeviceName=PIC16F887
+LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
+LanguageToolID={B6D1F1C2-3E8A-49F6-9C0A-75F5EBE32222}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.45\bin\xc8.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|main.c|serial.c|lcd.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=1
+TraceCmdString=
+DebugOptions=
+[File004]
+Location=C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\lcd.p1
+Folder=Intermediary
+DeviceName=PIC16F887
+LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
+LanguageToolID={B6D1F1C2-3E8A-49F6-9C0A-75F5EBE32222}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.45\bin\xc8.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|main.c|serial.c|lcd.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=1
+TraceCmdString=
+DebugOptions=
+[File005]
 Location=C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto 2\projeto.cof
 Folder=Output
 DeviceName=PIC16F887
@@ -37,10 +76,10 @@ LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.45\bin\xc8.exe
 PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
 SOLK=<src>|main.c|serial.c||<obj>||<lib>||<lkr>||
 SuiteArgsString=
-ToolArgsString= C9=1
+ToolArgsString=C9=1
 TraceCmdString=
 DebugOptions=
-[File003]
+[File006]
 Location=C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto 2\projeto.hex
 Folder=Output
 DeviceName=PIC16F887
@@ -50,10 +89,10 @@ LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.45\bin\xc8.exe
 PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
 SOLK=<src>|main.c|serial.c||<obj>||<lib>||<lkr>||
 SuiteArgsString=
-ToolArgsString= C9=1
+ToolArgsString=C9=1
 TraceCmdString=
 DebugOptions=
-[File004]
+[File007]
 Location=C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto 2\projeto.sym
 Folder=Output
 DeviceName=PIC16F887
@@ -63,10 +102,10 @@ LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.45\bin\xc8.exe
 PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
 SOLK=<src>|main.c|serial.c||<obj>||<lib>||<lkr>||
 SuiteArgsString=
-ToolArgsString= C9=1
+ToolArgsString=C9=1
 TraceCmdString=
 DebugOptions=
-[File005]
+[File008]
 Location=C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto 2\projeto.map
 Folder=Output
 DeviceName=PIC16F887
@@ -76,10 +115,10 @@ LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.45\bin\xc8.exe
 PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
 SOLK=<src>|main.c|serial.c||<obj>||<lib>||<lkr>||
 SuiteArgsString=
-ToolArgsString= C9=1
+ToolArgsString=C9=1
 TraceCmdString=
 DebugOptions=
-[File006]
+[File009]
 Location=C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto 2\projeto.hxl
 Folder=Output
 DeviceName=PIC16F887
@@ -89,10 +128,10 @@ LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.45\bin\xc8.exe
 PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
 SOLK=<src>|main.c|serial.c||<obj>||<lib>||<lkr>||
 SuiteArgsString=
-ToolArgsString= C9=1
+ToolArgsString=C9=1
 TraceCmdString=
 DebugOptions=
-[File007]
+[File010]
 Location=C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto 2\startup.lst
 Folder=Output
 DeviceName=PIC16F887
@@ -102,10 +141,10 @@ LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.45\bin\xc8.exe
 PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
 SOLK=<src>|main.c|serial.c||<obj>||<lib>||<lkr>||
 SuiteArgsString=
-ToolArgsString= C9=1
+ToolArgsString=C9=1
 TraceCmdString=
 DebugOptions=
-[File008]
+[File011]
 Location=C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto 2\startup.rlf
 Folder=Output
 DeviceName=PIC16F887
@@ -115,10 +154,10 @@ LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.45\bin\xc8.exe
 PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
 SOLK=<src>|main.c|serial.c||<obj>||<lib>||<lkr>||
 SuiteArgsString=
-ToolArgsString= C9=1
+ToolArgsString=C9=1
 TraceCmdString=
 DebugOptions=
-[File009]
+[File012]
 Location=C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto 2\doprnt.p1
 Folder=Output
 DeviceName=PIC16F887
@@ -128,10 +167,10 @@ LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.45\bin\xc8.exe
 PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
 SOLK=<src>|main.c|serial.c||<obj>||<lib>||<lkr>||
 SuiteArgsString=
-ToolArgsString= C9=1
+ToolArgsString=C9=1
 TraceCmdString=
 DebugOptions=
-[File010]
+[File013]
 Location=C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto 2\doprnt.pre
 Folder=Output
 DeviceName=PIC16F887
@@ -141,10 +180,10 @@ LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.45\bin\xc8.exe
 PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
 SOLK=<src>|main.c|serial.c||<obj>||<lib>||<lkr>||
 SuiteArgsString=
-ToolArgsString= C9=1
+ToolArgsString=C9=1
 TraceCmdString=
 DebugOptions=
-[File011]
+[File014]
 Location=C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto 2\projeto.obj
 Folder=Output
 DeviceName=PIC16F887
@@ -154,10 +193,10 @@ LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.45\bin\xc8.exe
 PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
 SOLK=<src>|main.c|serial.c||<obj>||<lib>||<lkr>||
 SuiteArgsString=
-ToolArgsString= C9=1
+ToolArgsString=C9=1
 TraceCmdString=
 DebugOptions=
-[File012]
+[File015]
 Location=C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto 2\projeto.lst
 Folder=Output
 DeviceName=PIC16F887
@@ -167,10 +206,10 @@ LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.45\bin\xc8.exe
 PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
 SOLK=<src>|main.c|serial.c||<obj>||<lib>||<lkr>||
 SuiteArgsString=
-ToolArgsString= C9=1
+ToolArgsString=C9=1
 TraceCmdString=
 DebugOptions=
-[File013]
+[File016]
 Location=C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto 2\projeto.rlf
 Folder=Output
 DeviceName=PIC16F887
@@ -180,10 +219,10 @@ LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.45\bin\xc8.exe
 PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
 SOLK=<src>|main.c|serial.c||<obj>||<lib>||<lkr>||
 SuiteArgsString=
-ToolArgsString= C9=1
+ToolArgsString=C9=1
 TraceCmdString=
 DebugOptions=
-[File014]
+[File017]
 Location=C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto 2\projeto.sdb
 Folder=Output
 DeviceName=PIC16F887
@@ -193,6 +232,175 @@ LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.45\bin\xc8.exe
 PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
 SOLK=<src>|main.c|serial.c||<obj>||<lib>||<lkr>||
 SuiteArgsString=
-ToolArgsString= C9=1
+ToolArgsString=C9=1
+TraceCmdString=
+DebugOptions=
+[File018]
+Location=C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\projeto.cof
+Folder=Output
+DeviceName=PIC16F887
+LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
+LanguageToolID={B6D1F1C2-3E8A-49F6-9C0A-75F5EBE32222}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.45\bin\xc8.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|main.c|serial.c|lcd.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=1
+TraceCmdString=
+DebugOptions=
+[File019]
+Location=C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\projeto.hex
+Folder=Output
+DeviceName=PIC16F887
+LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
+LanguageToolID={B6D1F1C2-3E8A-49F6-9C0A-75F5EBE32222}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.45\bin\xc8.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|main.c|serial.c|lcd.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=1
+TraceCmdString=
+DebugOptions=
+[File020]
+Location=C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\projeto.sym
+Folder=Output
+DeviceName=PIC16F887
+LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
+LanguageToolID={B6D1F1C2-3E8A-49F6-9C0A-75F5EBE32222}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.45\bin\xc8.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|main.c|serial.c|lcd.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=1
+TraceCmdString=
+DebugOptions=
+[File021]
+Location=C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\projeto.map
+Folder=Output
+DeviceName=PIC16F887
+LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
+LanguageToolID={B6D1F1C2-3E8A-49F6-9C0A-75F5EBE32222}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.45\bin\xc8.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|main.c|serial.c|lcd.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=1
+TraceCmdString=
+DebugOptions=
+[File022]
+Location=C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\projeto.hxl
+Folder=Output
+DeviceName=PIC16F887
+LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
+LanguageToolID={B6D1F1C2-3E8A-49F6-9C0A-75F5EBE32222}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.45\bin\xc8.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|main.c|serial.c|lcd.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=1
+TraceCmdString=
+DebugOptions=
+[File023]
+Location=C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\startup.lst
+Folder=Output
+DeviceName=PIC16F887
+LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
+LanguageToolID={B6D1F1C2-3E8A-49F6-9C0A-75F5EBE32222}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.45\bin\xc8.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|main.c|serial.c|lcd.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=1
+TraceCmdString=
+DebugOptions=
+[File024]
+Location=C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\startup.rlf
+Folder=Output
+DeviceName=PIC16F887
+LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
+LanguageToolID={B6D1F1C2-3E8A-49F6-9C0A-75F5EBE32222}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.45\bin\xc8.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|main.c|serial.c|lcd.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=1
+TraceCmdString=
+DebugOptions=
+[File025]
+Location=C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\doprnt.p1
+Folder=Output
+DeviceName=PIC16F887
+LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
+LanguageToolID={B6D1F1C2-3E8A-49F6-9C0A-75F5EBE32222}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.45\bin\xc8.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|main.c|serial.c|lcd.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=1
+TraceCmdString=
+DebugOptions=
+[File026]
+Location=C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\doprnt.pre
+Folder=Output
+DeviceName=PIC16F887
+LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
+LanguageToolID={B6D1F1C2-3E8A-49F6-9C0A-75F5EBE32222}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.45\bin\xc8.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|main.c|serial.c|lcd.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=1
+TraceCmdString=
+DebugOptions=
+[File027]
+Location=C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\projeto.obj
+Folder=Output
+DeviceName=PIC16F887
+LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
+LanguageToolID={B6D1F1C2-3E8A-49F6-9C0A-75F5EBE32222}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.45\bin\xc8.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|main.c|serial.c|lcd.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=1
+TraceCmdString=
+DebugOptions=
+[File028]
+Location=C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\projeto.lst
+Folder=Output
+DeviceName=PIC16F887
+LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
+LanguageToolID={B6D1F1C2-3E8A-49F6-9C0A-75F5EBE32222}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.45\bin\xc8.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|main.c|serial.c|lcd.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=1
+TraceCmdString=
+DebugOptions=
+[File029]
+Location=C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\projeto.rlf
+Folder=Output
+DeviceName=PIC16F887
+LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
+LanguageToolID={B6D1F1C2-3E8A-49F6-9C0A-75F5EBE32222}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.45\bin\xc8.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|main.c|serial.c|lcd.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=1
+TraceCmdString=
+DebugOptions=
+[File030]
+Location=C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\projeto.sdb
+Folder=Output
+DeviceName=PIC16F887
+LanguageToolSuiteID={38171385-97B2-4EC5-BF2C-C2C027BA5B04}
+LanguageToolID={B6D1F1C2-3E8A-49F6-9C0A-75F5EBE32222}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\xc8\v1.45\bin\xc8.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|main.c|serial.c|lcd.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=1
 TraceCmdString=
 DebugOptions=

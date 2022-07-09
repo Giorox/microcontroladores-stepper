@@ -45,6 +45,8 @@ int main (void)
     
 	// Funções de inicialização
     setupSerial(9600); // Configura a comunicação serial
+	setupDisplay(); // Inicializa o display LCD 16x2
 
 	sendChar('a'); // Transmission test
+	setCursor(0, 11); // Test set cursor position to line 1, column 11 (B in hex)
 }

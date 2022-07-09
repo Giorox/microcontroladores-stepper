@@ -1,7 +1,7 @@
 
 
 Microchip Technology PIC Macro Assembler V1.45 build -152302408 
-                                                                                                           Thu Jul 07 23:59:24 2022
+                                                                                                           Sat Jul 09 00:11:10 2022
 
 
      1                           
@@ -14,113 +14,114 @@ Microchip Technology PIC Macro Assembler V1.45 build -152302408
      8                           	; Compiler options:
      9                           	;
     10                           	; -oprojeto.cof -mprojeto.map --summary=default --output=default \
-    11                           	; main.p1 serial.p1 --chip=16F887 -P --runtime=default --opt=default \
-    12                           	; -N-1 -D__DEBUG=1 -g --asmlist --errformat=Error   [%n] %f; %l.%c %s \
-    13                           	; --msgformat=Advisory[%n] %s --warnformat=Warning [%n] %f; %l.%c %s
-    14                           	;
-    15                           
+    11                           	; main.p1 serial.p1 lcd.p1 --chip=16F887 -P --runtime=default \
+    12                           	; --opt=default -N-1 -D__DEBUG=1 -g --asmlist \
+    13                           	; --errformat=Error   [%n] %f; %l.%c %s --msgformat=Advisory[%n] %s \
+    14                           	; --warnformat=Warning [%n] %f; %l.%c %s
+    15                           	;
     16                           
-    17                           	processor	16F887
-    18                           
-    19                           	global	_main,start,reset_vec
-    20                           	fnroot	_main
-    21                           	psect	config,class=CONFIG,delta=2,noexec
-    22                           	psect	idloc,class=IDLOC,delta=2,noexec
-    23                           	psect	code,class=CODE,delta=2
-    24                           	psect	powerup,class=CODE,delta=2
-    25                           	psect	reset_vec,class=CODE,delta=2
-    26                           	psect	maintext,class=CODE,delta=2
-    27  0000                     	Z	set	2
-    28  0002                     	PCL	set	2
-    29  0002                     	INDF	set	0
-    30  0000                     
-    31                           	STATUS	equ	3
-    32  0003                     	PCLATH	equ	0Ah
-    33  000A                     
-    34                           	psect	eeprom_data,class=EEDATA,delta=2,space=3,noexec
-    35                           	psect	intentry,class=CODE,delta=2
-    36                           	psect	functab,class=ENTRY,delta=2
-    37                           	global	intlevel0,intlevel1,intlevel2, intlevel3, intlevel4, intlevel5
-    38                           intlevel0:
-    39  0000                     intlevel1:
-    40  0000                     intlevel2:
-    41  0000                     intlevel3:
-    42  0000                     intlevel4:
-    43  0000                     intlevel5:
-    44  0000                     	psect	init,class=CODE,delta=2
-    45                           	psect	cinit,class=CODE,delta=2
-    46                           	psect	text,class=CODE,delta=2
-    47                           	psect	end_init,class=CODE,delta=2
-    48                           	psect	clrtext,class=CODE,delta=2
-    49                           	FSR	set	4
-    50  0004                     	psect	strings,class=CODE,delta=2,reloc=256
-    51                           
-    52                           	global stacklo, stackhi
-    53                           	stacklo	equ	0
-    54  0000                     	stackhi	equ	0
-    55  0000                     
-    56                           
-    57                           	psect	stack,class=STACK,space=2,noexec
-    58                           	global ___sp,___int_sp
-    59                           	___sp:
-    60  0000                     	___int_sp:
-    61  0000                     	psect	reset_vec
-    62                           reset_vec:
-    63  0000                     	; No powerup routine
-    64                           	; No interrupt routine
-    65                           
+    17                           
+    18                           	processor	16F887
+    19                           
+    20                           	global	_main,start,reset_vec
+    21                           	fnroot	_main
+    22                           	psect	config,class=CONFIG,delta=2,noexec
+    23                           	psect	idloc,class=IDLOC,delta=2,noexec
+    24                           	psect	code,class=CODE,delta=2
+    25                           	psect	powerup,class=CODE,delta=2
+    26                           	psect	reset_vec,class=CODE,delta=2
+    27                           	psect	maintext,class=CODE,delta=2
+    28  0000                     	Z	set	2
+    29  0002                     	PCL	set	2
+    30  0002                     	INDF	set	0
+    31  0000                     
+    32                           	STATUS	equ	3
+    33  0003                     	PCLATH	equ	0Ah
+    34  000A                     
+    35                           	psect	eeprom_data,class=EEDATA,delta=2,space=3,noexec
+    36                           	psect	intentry,class=CODE,delta=2
+    37                           	psect	functab,class=ENTRY,delta=2
+    38                           	global	intlevel0,intlevel1,intlevel2, intlevel3, intlevel4, intlevel5
+    39                           intlevel0:
+    40  0000                     intlevel1:
+    41  0000                     intlevel2:
+    42  0000                     intlevel3:
+    43  0000                     intlevel4:
+    44  0000                     intlevel5:
+    45  0000                     	psect	init,class=CODE,delta=2
+    46                           	psect	cinit,class=CODE,delta=2
+    47                           	psect	text,class=CODE,delta=2
+    48                           	psect	end_init,class=CODE,delta=2
+    49                           	psect	clrtext,class=CODE,delta=2
+    50                           	FSR	set	4
+    51  0004                     	psect	strings,class=CODE,delta=2,reloc=256
+    52                           
+    53                           	global stacklo, stackhi
+    54                           	stacklo	equ	0
+    55  0000                     	stackhi	equ	0
+    56  0000                     
+    57                           
+    58                           	psect	stack,class=STACK,space=2,noexec
+    59                           	global ___sp,___int_sp
+    60                           	___sp:
+    61  0000                     	___int_sp:
+    62  0000                     	psect	reset_vec
+    63                           reset_vec:
+    64  0000                     	; No powerup routine
+    65                           	; No interrupt routine
     66                           
-    67                           	psect	init
-    68                           start
-    69  0000                     	psect	end_init
-    70                           	global start_initialization
-    71                           	ljmp start_initialization	;jump to C runtime clear & initialization
-    72  0000  120A  118A  2FFC   
-    73                           ; Config register CONFIG1 @ 0x2007
-    74                           ;	Oscillator Selection bits
-    75                           ;	FOSC = INTRC_NOCLKOUT, INTOSCIO oscillator: I/O function on RA6/OSC2/CLKOUT pin, I/O function on R
+    67                           
+    68                           	psect	init
+    69                           start
+    70  0000                     	psect	end_init
+    71                           	global start_initialization
+    72                           	ljmp start_initialization	;jump to C runtime clear & initialization
+    73  0000  120A  118A  2FFC   
+    74                           ; Config register CONFIG1 @ 0x2007
+    75                           ;	Oscillator Selection bits
+    76                           ;	FOSC = INTRC_NOCLKOUT, INTOSCIO oscillator: I/O function on RA6/OSC2/CLKOUT pin, I/O function on R
                                  A7/OSC1/CLKIN
-    76                           ;	Watchdog Timer Enable bit
-    77                           ;	WDTE = OFF, WDT disabled and can be enabled by SWDTEN bit of the WDTCON register
-    78                           ;	Power-up Timer Enable bit
-    79                           ;	PWRTE = OFF, PWRT disabled
-    80                           ;	RE3/MCLR pin function select bit
-    81                           ;	MCLRE = ON, RE3/MCLR pin function is MCLR
-    82                           ;	Code Protection bit
-    83                           ;	CP = OFF, Program memory code protection is disabled
-    84                           ;	Data Code Protection bit
-    85                           ;	CPD = OFF, Data memory code protection is disabled
-    86                           ;	Brown Out Reset Selection bits
-    87                           ;	BOREN = ON, BOR enabled
-    88                           ;	Internal External Switchover bit
-    89                           ;	IESO = ON, Internal/External Switchover mode is enabled
-    90                           ;	Fail-Safe Clock Monitor Enabled bit
-    91                           ;	FCMEN = ON, Fail-Safe Clock Monitor is enabled
-    92                           ;	Low Voltage Programming Enable bit
-    93                           ;	LVP = OFF, RB3 pin has digital I/O, HV on MCLR must be used for programming
-    94                           ;	In-Circuit Debugger Mode bit
-    95                           ;	DEBUG = 0x1, unprogrammed default
-    96                           
-    97                           	psect	config
-    98                           		org 0x0
-    99  2007                     		dw 0xEFF4
-   100  2007  EFF4               
-   101                           ; Config register CONFIG2 @ 0x2008
-   102                           ;	Brown-out Reset Selection bit
-   103                           ;	BOR4V = BOR40V, Brown-out Reset set to 4.0V
-   104                           ;	Flash Program Memory Self Write Enable bits
-   105                           ;	WRT = OFF, Write protection off
-   106                           
-   107                           	psect	config
-   108                           		org 0x1
-   109  2008                     		dw 0xFFFF
-   110  2008  FFFF               
+    77                           ;	Watchdog Timer Enable bit
+    78                           ;	WDTE = OFF, WDT disabled and can be enabled by SWDTEN bit of the WDTCON register
+    79                           ;	Power-up Timer Enable bit
+    80                           ;	PWRTE = OFF, PWRT disabled
+    81                           ;	RE3/MCLR pin function select bit
+    82                           ;	MCLRE = ON, RE3/MCLR pin function is MCLR
+    83                           ;	Code Protection bit
+    84                           ;	CP = OFF, Program memory code protection is disabled
+    85                           ;	Data Code Protection bit
+    86                           ;	CPD = OFF, Data memory code protection is disabled
+    87                           ;	Brown Out Reset Selection bits
+    88                           ;	BOREN = ON, BOR enabled
+    89                           ;	Internal External Switchover bit
+    90                           ;	IESO = ON, Internal/External Switchover mode is enabled
+    91                           ;	Fail-Safe Clock Monitor Enabled bit
+    92                           ;	FCMEN = ON, Fail-Safe Clock Monitor is enabled
+    93                           ;	Low Voltage Programming Enable bit
+    94                           ;	LVP = OFF, RB3 pin has digital I/O, HV on MCLR must be used for programming
+    95                           ;	In-Circuit Debugger Mode bit
+    96                           ;	DEBUG = 0x1, unprogrammed default
+    97                           
+    98                           	psect	config
+    99                           		org 0x0
+   100  2007                     		dw 0xEFF4
+   101  2007  EFF4               
+   102                           ; Config register CONFIG2 @ 0x2008
+   103                           ;	Brown-out Reset Selection bit
+   104                           ;	BOR4V = BOR40V, Brown-out Reset set to 4.0V
+   105                           ;	Flash Program Memory Self Write Enable bits
+   106                           ;	WRT = OFF, Write protection off
+   107                           
+   108                           	psect	config
+   109                           		org 0x1
+   110  2008                     		dw 0xFFFF
+   111  2008  FFFF               
 
 
 Microchip Technology PIC Macro Assembler V1.45 build -152302408 
-Symbol Table                                                                                               Thu Jul 07 23:59:24 2022
+Symbol Table                                                                                               Sat Jul 09 00:11:10 2022
 
-               ___sp 0000                 _main 0746                 start 0000               stackhi 0000  
+               ___sp 0000                 _main 0731                 start 0000               stackhi 0000  
              stacklo 0000  start_initialization 07FC             ___int_sp 0000             intlevel0 0000  
            intlevel1 0000             intlevel2 0000             intlevel3 0000             intlevel4 0000  
            intlevel5 0000             reset_vec 0000  

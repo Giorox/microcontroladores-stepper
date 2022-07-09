@@ -13,18 +13,28 @@
 [v _eecpymem eecpymem `(v  1 e 1 0 ]
 "39
 [v _memcpyee memcpyee `(v  1 e 1 0 ]
-"29 C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto 2\main.c
+"5 C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\lcd.c
+[v _setupDisplay setupDisplay `(v  1 e 1 0 ]
+"14
+[v _sendCommand sendCommand `(v  1 e 1 0 ]
+"39
+[v _setCursor setCursor `(v  1 e 1 0 ]
+"29 C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\main.c
 [v _main main `(i  1 e 2 0 ]
-"4 C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto 2\serial.c
+"4 C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\serial.c
 [v _setupSerial setupSerial `(v  1 e 1 0 ]
 "16
 [v _sendChar sendChar `(v  1 e 1 0 ]
-"1036 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic16f887.h
+"226 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic16f887.h
+[v _PORTB PORTB `VEuc  1 e 1 @6 ]
+"1036
 [v _RCSTA RCSTA `VEuc  1 e 1 @24 ]
 "1131
 [v _TXREG TXREG `VEuc  1 e 1 @25 ]
 "1138
 [v _RCREG RCREG `VEuc  1 e 1 @26 ]
+"1476
+[v _TRISB TRISB `VEuc  1 e 1 @134 ]
 [s S19 . 1 `uc 1 TRISC0 1 0 :1:0 
 `uc 1 TRISC1 1 0 :1:1 
 `uc 1 TRISC2 1 0 :1:2 
@@ -45,12 +55,12 @@
 [v _RCIF RCIF `VEb  1 e 0 @101 ]
 "4212
 [v _TXIF TXIF `VEb  1 e 0 @100 ]
-"29 C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto 2\main.c
+"29 C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\main.c
 [v _main main `(i  1 e 2 0 ]
 {
-"42
+"52
 } 0
-"4 C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto 2\serial.c
+"4 C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\serial.c
 [v _setupSerial setupSerial `(v  1 e 1 0 ]
 {
 "6
@@ -71,7 +81,34 @@
 [v ___lldiv@dividend dividend `ul  1 p 4 4 ]
 "31
 } 0
-"16 C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto 2\serial.c
+"5 C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\lcd.c
+[v _setupDisplay setupDisplay `(v  1 e 1 0 ]
+{
+"12
+} 0
+"39
+[v _setCursor setCursor `(v  1 e 1 0 ]
+{
+[v setCursor@linha linha `uc  1 a 1 wreg ]
+"41
+[v setCursor@position position `uc  1 a 1 5 ]
+"39
+[v setCursor@linha linha `uc  1 a 1 wreg ]
+[v setCursor@coluna coluna `uc  1 p 1 2 ]
+"41
+[v setCursor@linha linha `uc  1 a 1 4 ]
+"53
+} 0
+"14
+[v _sendCommand sendCommand `(v  1 e 1 0 ]
+{
+[v sendCommand@cmd cmd `uc  1 a 1 wreg ]
+[v sendCommand@cmd cmd `uc  1 a 1 wreg ]
+"16
+[v sendCommand@cmd cmd `uc  1 a 1 1 ]
+"22
+} 0
+"16 C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\serial.c
 [v _sendChar sendChar `(v  1 e 1 0 ]
 {
 [v sendChar@ch ch `uc  1 a 1 wreg ]
