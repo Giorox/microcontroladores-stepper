@@ -51,3 +51,10 @@ void setCursor(uint8_t linha, uint8_t coluna)
 	position = position + coluna;
 	sendCommand(position);
 }
+
+void printLine(unsigned char *s)
+{
+    while(*s) {
+        sendCharToLCD(*s++);
+    }
+}

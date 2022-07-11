@@ -19,3 +19,6 @@ void setCursor(uint8_t linha, uint8_t coluna);
 // Função para enviar algum comando para o LCD
 void sendCommand(char cmd);
 
+// Função para printar uma string no LCD
+void printLine(unsigned char *s);
+
