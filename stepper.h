@@ -20,5 +20,8 @@ uint16_t getPosicaoAtual(void);
 // Setta a posição desejada
 void setPosicaoDesejada(uint16_t posicao_desejada);
 
-//Funçao para rotacionar o motor 
+//Funçao para rotacionar o motor para direita
 void rotacionarParaDireita();
+
+//Funçao para rotacionar o motor para esquerda
+void rotacionarParaEsquerda();
