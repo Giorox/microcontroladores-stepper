@@ -2,7 +2,7 @@
 #include "stepper.h"
 #define _XTAL_FREQ 4000000  // Pass FOSC value to XC8 compiler to enable use of built-in delay functions
 
-uint16_t posicao;
+uint16_t posicaoAtual;
 uint16_t velocidade;
 uint16_t delayTime;
 uint16_t posicaoDesejada;	
@@ -44,31 +44,33 @@ void setPosicaoDesejada(uint16_t posicao_desejada)
 
 void rotacionarParaDireita()
 {
-	float anguloCiclo = 0.36;
+	float anguloCiclo = 4 * 0.18;
 	uint16_t ciclos = (int)(posicaoDesejada - posicaoAtual)/anguloCiclo;
 	uint16_t i;
 	uint16_t j;
-	char halfStep[8] = {0b00001000,0b00001100,0b00000100, 0b00000110,0b00000010,0b00000011,0b00000001, 0b00001001};
+	char fullStep[4] = {0b00001100,0b00000110,0b00000011, 0b00001001};
 	for(i = 0; i < ciclos; i++){
-		for(j = 0; j<8;j++){
-			PORTD = halfStep[j]
+		for(j = 0; j<4;j++){
+			PORTD = fullStep[j]
 			__delay_us(delayTime);
 		}
 	}
 	PORTD = 0x00;
+	setPosicaoAtual(posicaoDesejada);
 }
 void rotacionarParaEsquerda()
 {
-	float anguloCiclo = 0.36;
+	float anguloCiclo = 4 * 0.18;
 	uint16_t ciclos = (int)((posicaoAtual + 360) - posicaoDesejada )/anguloCiclo;
 	uint16_t i;
 	uint16_t j;
-	char halfStep[8] = {0b00001000,0b00001100,0b00000100, 0b00000110,0b00000010,0b00000011,0b00000001, 0b00001001};
+	char fullStep[4] = {0b00001100,0b00000110,0b00000011, 0b00001001};
 	for(i = 0; i < ciclos; i++){
-		for(j = 7; j>=0;j--){
-			PORTD = halfStep[j]
+		for(j = 3; j>=0;j--){
+			PORTD = fullStep[j]
 			__delay_us(delayTime);
 		}
 	}
 	PORTD = 0x00;
+	setPosicaoAtual(posicaoDesejada);
 }
