@@ -4,31 +4,49 @@
 
 void setupDisplay(void)
 {
-	sendCommand(0x38); // Configure to 2 lines and to use 5x7 matrices
-    sendCommand(0x0C); // Display on - cursor off
-    sendCommand(0x06); // Move cursor to the right
+	sendCommand(0x02); //  4-bit mode
+	sendCommand(0x28); // Configure to 2 lines and to use 5x7 matrices
+    sendCommand(0x0E); // Display off - cursor on
+    sendCommand(0x01); // Clear Display
     sendCommand(0x80); // Force cursor to beginning of first line
-	sendCommand(0x8A); //Set cursor to 0x8A position
 }
 
 void sendCommand(char cmd)
 {
-    PORTB = cmd; // Set the command to PORTB
-    TRISCbits.TRISC0 = 0; // RS = 0
-    TRISCbits.TRISC1 = 0; // RW = 0
-    TRISCbits.TRISC2 = 1; // EN = 1
+    PORTB = (cmd & 0xF0)>>4;     // Send higher nibble
+    PORTBbits.RB4 = 0; // RS = 0
+    PORTBbits.RB5 = 1; // EN = 1
     __delay_us(50);
-    TRISCbits.TRISC2 = 0; // EN = 0
+    PORTBbits.RB5 = 0; // EN = 0
+
+    __delay_us(50);
+
+    PORTB = (cmd & 0x0F); // Send Lower nibble
+    PORTBbits.RB4 = 0; // RS = 0
+    PORTBbits.RB5 = 1; // EN = 1
+    __delay_us(50);
+    PORTBbits.RB5 = 0; // EN = 0
+
+    __delay_us(50);
 }
 
 void sendCharToLCD(char ch)
 {
-    PORTB = ch; // Set character to output
-    TRISCbits.TRISC0 = 1; // RS = 1
-    TRISCbits.TRISC1 = 0; // RW = 0
-    TRISCbits.TRISC2 = 1; // EN = 1
+    PORTB = (ch & 0xF0)>>4;     // Send higher nibble
+    PORTBbits.RB4 = 1; // RS = 1
+    PORTBbits.RB5 = 1; // EN = 1
     __delay_us(50);
-    TRISCbits.TRISC2 = 0; // EN = 0
+    PORTBbits.RB5 = 0; // EN = 0
+
+    __delay_us(50);
+
+    PORTB = (ch & 0x0F); // Send Lower nibble
+    PORTBbits.RB4 = 1; // RS = 1
+    PORTBbits.RB5 = 1; // EN = 1
+    __delay_us(50);
+    PORTBbits.RB5 = 0; // EN = 0
+
+    __delay_us(50);
 }
 
 void clearDisplay(void)

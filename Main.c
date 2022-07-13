@@ -37,17 +37,25 @@ int main (void)
 	TRISCbits.TRISC7 = 1;
 
 	// Configuração dos pinos para lidar com LCD
-	// Zera todos os pinos de dados, os pinos de RS, RW e EN
-	TRISB = 0; // Data
-	TRISCbits.TRISC0 = 0; // Pino de Register Select - RS
-	TRISCbits.TRISC1 = 0; // Pino de Read/Write - RW
-	TRISCbits.TRISC2 = 0; // Pino de Enable - EN
+	// Bit RW is wired to GND in EasyPICV6
+	TRISB = 0x00; // Configura o PORTB inteiro como saída
+	PORTB = 0x00; // Zera os dados na saída do PORTB
+
+	// Configuração dos pinos do motor de passo
+	// Configura todos os pinos como saída, usar TRISA-PORTA ou TRISD-PORTD
+	TRISD = 0x00;
+	PORTD = 0x00;
     
 	// Funções de inicialização
     setupSerial(9600); // Configura a comunicação serial
 	setupDisplay(); // Inicializa o display LCD 16x2
 	setupStepper();// Inicializa o stepper do motor
 
-	sendChar('a'); // Transmission test
-	setCursor(0, 11); // Test set cursor position to line 1, column 11 (B in hex)
+	while(1)
+	{
+		// Implementar a integração entre as peças
+		// Menu de opções? -- Settar posição desejada, escolher velocidade, resettar
+		// Interagir via SERIAL aqui
+		// Atualizar o LCD quando necessário (pensar o que vai onde)
+	}
 }

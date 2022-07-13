@@ -51,7 +51,7 @@ void rotacionarParaDireita()
 	char fullStep[4] = {0b00001100,0b00000110,0b00000011, 0b00001001};
 	for(i = 0; i < ciclos; i++){
 		for(j = 0; j<4;j++){
-			PORTD = fullStep[j]
+			PORTD = fullStep[j];
 			__delay_us(delayTime);
 		}
 	}
@@ -67,7 +67,7 @@ void rotacionarParaEsquerda()
 	char fullStep[4] = {0b00001100,0b00000110,0b00000011, 0b00001001};
 	for(i = 0; i < ciclos; i++){
 		for(j = 3; j>=0;j--){
-			PORTD = fullStep[j]
+			PORTD = fullStep[j];
 			__delay_us(delayTime);
 		}
 	}

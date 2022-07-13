@@ -1,7 +1,7 @@
 
 
 Microchip Technology PIC Macro Assembler V1.45 build -152302408 
-                                                                                                           Sat Jul 09 00:11:10 2022
+                                                                                                           Wed Jul 13 19:02:11 2022
 
 
      1                           
@@ -14,8 +14,8 @@ Microchip Technology PIC Macro Assembler V1.45 build -152302408
      8                           	; Compiler options:
      9                           	;
     10                           	; -oprojeto.cof -mprojeto.map --summary=default --output=default \
-    11                           	; main.p1 serial.p1 lcd.p1 --chip=16F887 -P --runtime=default \
-    12                           	; --opt=default -N-1 -D__DEBUG=1 -g --asmlist \
+    11                           	; main.p1 serial.p1 lcd.p1 stepper.p1 --chip=16F887 -P \
+    12                           	; --runtime=default --opt=default -N-1 -D__DEBUG=1 -g --asmlist \
     13                           	; --errformat=Error   [%n] %f; %l.%c %s --msgformat=Advisory[%n] %s \
     14                           	; --warnformat=Warning [%n] %f; %l.%c %s
     15                           	;
@@ -76,7 +76,7 @@ Microchip Technology PIC Macro Assembler V1.45 build -152302408
     70  0000                     	psect	end_init
     71                           	global start_initialization
     72                           	ljmp start_initialization	;jump to C runtime clear & initialization
-    73  0000  120A  118A  2FFC   
+    73  0000  120A  118A  2FE8   
     74                           ; Config register CONFIG1 @ 0x2007
     75                           ;	Oscillator Selection bits
     76                           ;	FOSC = INTRC_NOCLKOUT, INTOSCIO oscillator: I/O function on RA6/OSC2/CLKOUT pin, I/O function on R
@@ -119,9 +119,9 @@ Microchip Technology PIC Macro Assembler V1.45 build -152302408
 
 
 Microchip Technology PIC Macro Assembler V1.45 build -152302408 
-Symbol Table                                                                                               Sat Jul 09 00:11:10 2022
+Symbol Table                                                                                               Wed Jul 13 19:02:11 2022
 
-               ___sp 0000                 _main 0731                 start 0000               stackhi 0000  
-             stacklo 0000  start_initialization 07FC             ___int_sp 0000             intlevel0 0000  
+               ___sp 0000                 _main 06B8                 start 0000               stackhi 0000  
+             stacklo 0000  start_initialization 07E8             ___int_sp 0000             intlevel0 0000  
            intlevel1 0000             intlevel2 0000             intlevel3 0000             intlevel4 0000  
            intlevel5 0000             reset_vec 0000  

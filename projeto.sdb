@@ -3,12 +3,24 @@
 [d edition pro ]
 [d chip 16F887 ]
 [d frameptr 6 ]
+"32 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\awtoft.c
+[v ___awtoft __awtoft `(f  1 e 3 0 ]
 "62 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\float.c
 [v ___ftpack __ftpack `(f  1 e 3 0 ]
 "86 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\ftadd.c
 [v ___ftadd __ftadd `(f  1 e 3 0 ]
+"56 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 3 0 ]
+"62 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 3 0 ]
+"44 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\fttol.c
+[v ___fttol __fttol `(l  1 e 4 0 ]
 "6 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lldiv.c
 [v ___lldiv __lldiv `(ul  1 e 4 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+"28 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lwtoft.c
+[v ___lwtoft __lwtoft `(f  1 e 3 0 ]
 "6 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\pic\eeprom.c
 [v _eecpymem eecpymem `(v  1 e 1 0 ]
 "39
@@ -17,22 +29,44 @@
 [v _setupDisplay setupDisplay `(v  1 e 1 0 ]
 "14
 [v _sendCommand sendCommand `(v  1 e 1 0 ]
-"39
-[v _setCursor setCursor `(v  1 e 1 0 ]
+"33
+[v _sendCharToLCD sendCharToLCD `(v  1 e 1 0 ]
 "29 C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\main.c
 [v _main main `(i  1 e 2 0 ]
 "4 C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\serial.c
 [v _setupSerial setupSerial `(v  1 e 1 0 ]
-"16
-[v _sendChar sendChar `(v  1 e 1 0 ]
-"226 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic16f887.h
+"11 C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\stepper.c
+[v _setupStepper setupStepper `(v  1 e 1 0 ]
+"19
+[v _setPosicaoAtual setPosicaoAtual `(v  1 e 1 0 ]
+"24
+[v _setVelocidade setVelocidade `(v  1 e 1 0 ]
+"164 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic16f887.h
+[v _PORTA PORTA `VEuc  1 e 1 @5 ]
+"226
 [v _PORTB PORTB `VEuc  1 e 1 @6 ]
+[s S89 . 1 `uc 1 RB0 1 0 :1:0 
+`uc 1 RB1 1 0 :1:1 
+`uc 1 RB2 1 0 :1:2 
+`uc 1 RB3 1 0 :1:3 
+`uc 1 RB4 1 0 :1:4 
+`uc 1 RB5 1 0 :1:5 
+`uc 1 RB6 1 0 :1:6 
+`uc 1 RB7 1 0 :1:7 
+]
+"243
+[u S98 . 1 `S89 1 . 1 0 ]
+[v _PORTBbits PORTBbits `VES98  1 e 1 @6 ]
+"350
+[v _PORTD PORTD `VEuc  1 e 1 @8 ]
 "1036
 [v _RCSTA RCSTA `VEuc  1 e 1 @24 ]
 "1131
 [v _TXREG TXREG `VEuc  1 e 1 @25 ]
 "1138
 [v _RCREG RCREG `VEuc  1 e 1 @26 ]
+"1414
+[v _TRISA TRISA `VEuc  1 e 1 @133 ]
 "1476
 [v _TRISB TRISB `VEuc  1 e 1 @134 ]
 [s S19 . 1 `uc 1 TRISC0 1 0 :1:0 
@@ -55,10 +89,41 @@
 [v _RCIF RCIF `VEb  1 e 0 @101 ]
 "4212
 [v _TXIF TXIF `VEb  1 e 0 @100 ]
+"5 C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\stepper.c
+[v _posicaoAtual posicaoAtual `ui  1 e 2 0 ]
+"6
+[v _velocidade velocidade `ui  1 e 2 0 ]
+"7
+[v _delayTime delayTime `ui  1 e 2 0 ]
+"8
+[v _posicaoDesejada posicaoDesejada `ui  1 e 2 0 ]
 "29 C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\main.c
 [v _main main `(i  1 e 2 0 ]
 {
-"52
+"61
+} 0
+"11 C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\stepper.c
+[v _setupStepper setupStepper `(v  1 e 1 0 ]
+{
+"17
+} 0
+"24
+[v _setVelocidade setVelocidade `(v  1 e 1 0 ]
+{
+[v setVelocidade@speed speed `ui  1 p 2 8 ]
+"28
+} 0
+"6 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+{
+"11
+[v ___lwdiv@quotient quotient `ui  1 a 2 5 ]
+"12
+[v ___lwdiv@counter counter `uc  1 a 1 7 ]
+"6
+[v ___lwdiv@divisor divisor `ui  1 p 2 0 ]
+[v ___lwdiv@dividend dividend `ui  1 p 2 2 ]
+"31
 } 0
 "4 C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\serial.c
 [v _setupSerial setupSerial `(v  1 e 1 0 ]
@@ -86,19 +151,6 @@
 {
 "12
 } 0
-"39
-[v _setCursor setCursor `(v  1 e 1 0 ]
-{
-[v setCursor@linha linha `uc  1 a 1 wreg ]
-"41
-[v setCursor@position position `uc  1 a 1 5 ]
-"39
-[v setCursor@linha linha `uc  1 a 1 wreg ]
-[v setCursor@coluna coluna `uc  1 p 1 2 ]
-"41
-[v setCursor@linha linha `uc  1 a 1 4 ]
-"53
-} 0
 "14
 [v _sendCommand sendCommand `(v  1 e 1 0 ]
 {
@@ -106,14 +158,5 @@
 [v sendCommand@cmd cmd `uc  1 a 1 wreg ]
 "16
 [v sendCommand@cmd cmd `uc  1 a 1 1 ]
-"22
-} 0
-"16 C:\Users\giova\Desktop\UNIFEI\ECAi11 - Microcontroladores\Projeto - 2022\serial.c
-[v _sendChar sendChar `(v  1 e 1 0 ]
-{
-[v sendChar@ch ch `uc  1 a 1 wreg ]
-[v sendChar@ch ch `uc  1 a 1 wreg ]
-"18
-[v sendChar@ch ch `uc  1 a 1 0 ]
-"21
+"31
 } 0
