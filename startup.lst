@@ -1,7 +1,7 @@
 
 
 Microchip Technology PIC Macro Assembler V1.45 build -152302408 
-                                                                                                           Wed Jul 13 19:02:11 2022
+                                                                                                           Fri Jul 15 18:23:37 2022
 
 
      1                           
@@ -15,9 +15,9 @@ Microchip Technology PIC Macro Assembler V1.45 build -152302408
      9                           	;
     10                           	; -oprojeto.cof -mprojeto.map --summary=default --output=default \
     11                           	; main.p1 serial.p1 lcd.p1 stepper.p1 --chip=16F887 -P \
-    12                           	; --runtime=default --opt=default -N-1 -D__DEBUG=1 -g --asmlist \
-    13                           	; --errformat=Error   [%n] %f; %l.%c %s --msgformat=Advisory[%n] %s \
-    14                           	; --warnformat=Warning [%n] %f; %l.%c %s
+    12                           	; --runtime=default --opt=default -N-1 -D__DEBUG=1 --debugger=icd2 -g \
+    13                           	; --asmlist --errformat=Error   [%n] %f; %l.%c %s \
+    14                           	; --msgformat=Advisory[%n] %s --warnformat=Warning [%n] %f; %l.%c %s
     15                           	;
     16                           
     17                           
@@ -67,61 +67,63 @@ Microchip Technology PIC Macro Assembler V1.45 build -152302408
     61  0000                     	___int_sp:
     62  0000                     	psect	reset_vec
     63                           reset_vec:
-    64  0000                     	; No powerup routine
-    65                           	; No interrupt routine
-    66                           
-    67                           
-    68                           	psect	init
-    69                           start
-    70  0000                     	psect	end_init
-    71                           	global start_initialization
-    72                           	ljmp start_initialization	;jump to C runtime clear & initialization
-    73  0000  120A  118A  2FE8   
-    74                           ; Config register CONFIG1 @ 0x2007
-    75                           ;	Oscillator Selection bits
-    76                           ;	FOSC = INTRC_NOCLKOUT, INTOSCIO oscillator: I/O function on RA6/OSC2/CLKOUT pin, I/O function on R
+    64  0000                     	nop	; NOP inserted due to debugger requirements
+    65  0000  0000               
+    66                           	; No powerup routine
+    67                           	; No interrupt routine
+    68                           
+    69                           
+    70                           	psect	init
+    71                           start
+    72  0001                     	psect	end_init
+    73                           	global start_initialization
+    74                           	ljmp start_initialization	;jump to C runtime clear & initialization
+    75  0001  120A  118A  2FE6   
+    76                           ; Config register CONFIG1 @ 0x2007
+    77                           ;	Oscillator Selection bits
+    78                           ;	FOSC = INTRC_NOCLKOUT, INTOSCIO oscillator: I/O function on RA6/OSC2/CLKOUT pin, I/O function on R
                                  A7/OSC1/CLKIN
-    77                           ;	Watchdog Timer Enable bit
-    78                           ;	WDTE = OFF, WDT disabled and can be enabled by SWDTEN bit of the WDTCON register
-    79                           ;	Power-up Timer Enable bit
-    80                           ;	PWRTE = OFF, PWRT disabled
-    81                           ;	RE3/MCLR pin function select bit
-    82                           ;	MCLRE = ON, RE3/MCLR pin function is MCLR
-    83                           ;	Code Protection bit
-    84                           ;	CP = OFF, Program memory code protection is disabled
-    85                           ;	Data Code Protection bit
-    86                           ;	CPD = OFF, Data memory code protection is disabled
-    87                           ;	Brown Out Reset Selection bits
-    88                           ;	BOREN = ON, BOR enabled
-    89                           ;	Internal External Switchover bit
-    90                           ;	IESO = ON, Internal/External Switchover mode is enabled
-    91                           ;	Fail-Safe Clock Monitor Enabled bit
-    92                           ;	FCMEN = ON, Fail-Safe Clock Monitor is enabled
-    93                           ;	Low Voltage Programming Enable bit
-    94                           ;	LVP = OFF, RB3 pin has digital I/O, HV on MCLR must be used for programming
-    95                           ;	In-Circuit Debugger Mode bit
-    96                           ;	DEBUG = 0x1, unprogrammed default
-    97                           
-    98                           	psect	config
-    99                           		org 0x0
-   100  2007                     		dw 0xEFF4
-   101  2007  EFF4               
-   102                           ; Config register CONFIG2 @ 0x2008
-   103                           ;	Brown-out Reset Selection bit
-   104                           ;	BOR4V = BOR40V, Brown-out Reset set to 4.0V
-   105                           ;	Flash Program Memory Self Write Enable bits
-   106                           ;	WRT = OFF, Write protection off
-   107                           
-   108                           	psect	config
-   109                           		org 0x1
-   110  2008                     		dw 0xFFFF
-   111  2008  FFFF               
+    79                           ;	Watchdog Timer Enable bit
+    80                           ;	WDTE = OFF, WDT disabled and can be enabled by SWDTEN bit of the WDTCON register
+    81                           ;	Power-up Timer Enable bit
+    82                           ;	PWRTE = OFF, PWRT disabled
+    83                           ;	RE3/MCLR pin function select bit
+    84                           ;	MCLRE = ON, RE3/MCLR pin function is MCLR
+    85                           ;	Code Protection bit
+    86                           ;	CP = OFF, Program memory code protection is disabled
+    87                           ;	Data Code Protection bit
+    88                           ;	CPD = OFF, Data memory code protection is disabled
+    89                           ;	Brown Out Reset Selection bits
+    90                           ;	BOREN = ON, BOR enabled
+    91                           ;	Internal External Switchover bit
+    92                           ;	IESO = ON, Internal/External Switchover mode is enabled
+    93                           ;	Fail-Safe Clock Monitor Enabled bit
+    94                           ;	FCMEN = ON, Fail-Safe Clock Monitor is enabled
+    95                           ;	Low Voltage Programming Enable bit
+    96                           ;	LVP = OFF, RB3 pin has digital I/O, HV on MCLR must be used for programming
+    97                           ;	In-Circuit Debugger Mode bit
+    98                           ;	DEBUG = 0x1, unprogrammed default
+    99                           
+   100                           	psect	config
+   101                           		org 0x0
+   102  2007                     		dw 0xEFF4
+   103  2007  EFF4               
+   104                           ; Config register CONFIG2 @ 0x2008
+   105                           ;	Brown-out Reset Selection bit
+   106                           ;	BOR4V = BOR40V, Brown-out Reset set to 4.0V
+   107                           ;	Flash Program Memory Self Write Enable bits
+   108                           ;	WRT = OFF, Write protection off
+   109                           
+   110                           	psect	config
+   111                           		org 0x1
+   112  2008                     		dw 0xFFFF
+   113  2008  FFFF               
 
 
 Microchip Technology PIC Macro Assembler V1.45 build -152302408 
-Symbol Table                                                                                               Wed Jul 13 19:02:11 2022
+Symbol Table                                                                                               Fri Jul 15 18:23:37 2022
 
-               ___sp 0000                 _main 06B8                 start 0000               stackhi 0000  
-             stacklo 0000  start_initialization 07E8             ___int_sp 0000             intlevel0 0000  
+               ___sp 0000                 _main 06E9                 start 0001               stackhi 0000  
+             stacklo 0000  start_initialization 07E6             ___int_sp 0000             intlevel0 0000  
            intlevel1 0000             intlevel2 0000             intlevel3 0000             intlevel4 0000  
            intlevel5 0000             reset_vec 0000  

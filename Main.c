@@ -2,6 +2,8 @@
 #include <xc.h>
 #include <stdint.h>
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 // Headers proprietários
 #include "lcd.h"
@@ -26,10 +28,13 @@
 
 #define _XTAL_FREQ 4000000  // Pass FOSC value to XC8 compiler to enable use of built-in delay functions
 
+char* input;
+char ch;
+
 int main (void)
 {
 	// Habilita a configuração de pinos analógicos como entradas digitais
-	//ANSELH=0x00;
+	ANSELH=0x00;
 
 	// Configuração dos pinos para comunicação serial
 	// Configura o pino 6 como saída (TX) e o pino 7 como entrada (RX)
@@ -47,15 +52,56 @@ int main (void)
 	PORTD = 0x00;
     
 	// Funções de inicialização
-    setupSerial(9600); // Configura a comunicação serial
+    setupSerial(2400); // Configura a comunicação serial
 	setupDisplay(); // Inicializa o display LCD 16x2
 	setupStepper();// Inicializa o stepper do motor
 
+	clearDisplay();
+	printLine("PA: ___  PD: ___");
+	setCursor(1,0); // Linha 2, posição horizontal 0
+	printLine("Vel: ___ RPM");
+	
+	setPosicaoDesejada(180);
+	//rotacionarParaDireita();
+	
 	while(1)
 	{
-		// Implementar a integração entre as peças
-		// Menu de opções? -- Settar posição desejada, escolher velocidade, resettar
-		// Interagir via SERIAL aqui
-		// Atualizar o LCD quando necessário (pensar o que vai onde)
+		// Pega posição atual
+		uint16_t posAtual = getPosicaoAtual();
+		uint16_t posDesejada = getPosicaoDesejada();
+		
+		// Converte int para str
+		char posAtual_str[10];
+		sprintf(posAtual_str, "%d", posAtual);
+		char posDesejada_str[10];
+		sprintf(posDesejada_str, "%d", posDesejada);
+		
+		// Printa posição atual
+		setCursor(0,4);
+		printLine(posAtual_str);
+		
+		// Printa Posição desejada
+		setCursor(0,13);
+		printLine(posDesejada_str);
+		
+		// Printa Velocidade
+		setCursor(1,5);
+		printLine("200");
+		
+		// Entrada de dados pelo serial
+		ch = getChar();
+		if(ch == 0x0D) // Aguarda pelo enter
+		{
+			clearDisplay();
+			setCursor(0,0);
+			printLine(input);
+			input = NULL;
+		}
+		else
+		{
+			//input = input + ch;
+    		strcat(input, ch);
+    		printLine(input);
+		}
 	}
 }

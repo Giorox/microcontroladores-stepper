@@ -4,9 +4,11 @@
 
 void setupDisplay(void)
 {
+	__delay_ms(20); // Initial boot-up delay
 	sendCommand(0x02); //  4-bit mode
 	sendCommand(0x28); // Configure to 2 lines and to use 5x7 matrices
-    sendCommand(0x0E); // Display off - cursor on
+    sendCommand(0x0C); // Display on - cursor off
+    sendCommand(0x06); // Auto-increment cursor
     sendCommand(0x01); // Clear Display
     sendCommand(0x80); // Force cursor to beginning of first line
 }
@@ -16,18 +18,18 @@ void sendCommand(char cmd)
     PORTB = (cmd & 0xF0)>>4;     // Send higher nibble
     PORTBbits.RB4 = 0; // RS = 0
     PORTBbits.RB5 = 1; // EN = 1
-    __delay_us(50);
+    __delay_ms(5);
     PORTBbits.RB5 = 0; // EN = 0
 
-    __delay_us(50);
+    __delay_ms(5);
 
     PORTB = (cmd & 0x0F); // Send Lower nibble
     PORTBbits.RB4 = 0; // RS = 0
     PORTBbits.RB5 = 1; // EN = 1
-    __delay_us(50);
+    __delay_ms(5);
     PORTBbits.RB5 = 0; // EN = 0
 
-    __delay_us(50);
+    __delay_ms(5);
 }
 
 void sendCharToLCD(char ch)
@@ -35,18 +37,18 @@ void sendCharToLCD(char ch)
     PORTB = (ch & 0xF0)>>4;     // Send higher nibble
     PORTBbits.RB4 = 1; // RS = 1
     PORTBbits.RB5 = 1; // EN = 1
-    __delay_us(50);
+    __delay_ms(5);
     PORTBbits.RB5 = 0; // EN = 0
 
-    __delay_us(50);
+    __delay_ms(5);
 
     PORTB = (ch & 0x0F); // Send Lower nibble
     PORTBbits.RB4 = 1; // RS = 1
     PORTBbits.RB5 = 1; // EN = 1
-    __delay_us(50);
+    __delay_ms(5);
     PORTBbits.RB5 = 0; // EN = 0
 
-    __delay_us(50);
+    __delay_ms(5);
 }
 
 void clearDisplay(void)

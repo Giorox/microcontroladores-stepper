@@ -9,9 +9,9 @@
 	;
 	; -oprojeto.cof -mprojeto.map --summary=default --output=default \
 	; main.p1 serial.p1 lcd.p1 stepper.p1 --chip=16F887 -P \
-	; --runtime=default --opt=default -N-1 -D__DEBUG=1 -g --asmlist \
-	; --errformat=Error   [%n] %f; %l.%c %s --msgformat=Advisory[%n] %s \
-	; --warnformat=Warning [%n] %f; %l.%c %s
+	; --runtime=default --opt=default -N-1 -D__DEBUG=1 --debugger=icd2 -g \
+	; --asmlist --errformat=Error   [%n] %f; %l.%c %s \
+	; --msgformat=Advisory[%n] %s --warnformat=Warning [%n] %f; %l.%c %s
 	;
 
 
@@ -62,6 +62,8 @@ intlevel5:
 	___int_sp:
 	psect	reset_vec
 reset_vec:
+	nop	; NOP inserted due to debugger requirements
+
 	; No powerup routine
 	; No interrupt routine
 

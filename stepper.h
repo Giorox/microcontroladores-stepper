@@ -17,6 +17,9 @@ uint16_t getVelocidade();
 // Retorna o valor da posição atual do motor
 uint16_t getPosicaoAtual(void);
 
+// Retorna o valor da posição desejada do motor
+uint16_t getPosicaoDesejada(void);
+
 // Setta a posição desejada
 void setPosicaoDesejada(uint16_t posicao_desejada);
 

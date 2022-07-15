@@ -11,7 +11,8 @@ uint16_t posicaoDesejada;
 void setupStepper(void)
 {
 	posicaoAtual = 0;
-    setVelocidade(1);
+    velocidade = 1;
+	delayTime = 50;
 	posicaoDesejada = 0;
 	
 }
@@ -24,7 +25,7 @@ void setPosicaoAtual(uint16_t posicao_atual)
 void setVelocidade(uint16_t speed)
 {
 	velocidade = speed;
-	delayTime = 240/speed;
+	delayTime = 10/speed;
 }
 
 uint16_t getVelocidade()
@@ -35,6 +36,11 @@ uint16_t getVelocidade()
 uint16_t getPosicaoAtual(void)
 {
 	return posicaoAtual;
+}
+
+uint16_t getPosicaoDesejada(void)
+{
+	return posicaoDesejada;
 }
 
 void setPosicaoDesejada(uint16_t posicao_desejada)
@@ -48,6 +54,7 @@ void rotacionarParaDireita()
 	uint16_t ciclos = (int)(posicaoDesejada - posicaoAtual)/anguloCiclo;
 	uint16_t i;
 	uint16_t j;
+	uint16_t k;
 	char fullStep[4] = {0b00001100,0b00000110,0b00000011, 0b00001001};
 	for(i = 0; i < ciclos; i++){
 		for(j = 0; j<4;j++){
@@ -64,6 +71,7 @@ void rotacionarParaEsquerda()
 	uint16_t ciclos = (int)((posicaoAtual + 360) - posicaoDesejada )/anguloCiclo;
 	uint16_t i;
 	uint16_t j;
+	uint16_t k;
 	char fullStep[4] = {0b00001100,0b00000110,0b00000011, 0b00001001};
 	for(i = 0; i < ciclos; i++){
 		for(j = 3; j>=0;j--){
