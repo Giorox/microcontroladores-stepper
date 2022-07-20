@@ -29,3 +29,10 @@ char getChar()
     RCIF = 0;  // Reset the interruption
     return RCREG;  // Return the value contained in the receive buffer
 }
+
+void sendLineSerial(unsigned char *s)
+{
+    while(*s) {
+        sendChar(*s++);
+    }
+}

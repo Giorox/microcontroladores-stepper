@@ -10,3 +10,6 @@ char getChar(void);
 
 // Envia um caractere através da comunicação serial (TX)
 void sendChar(char ch);
+
+// Envia uma string pro serial
+void sendLineSerial(unsigned char *s);

@@ -28,7 +28,7 @@
 
 #define _XTAL_FREQ 4000000  // Pass FOSC value to XC8 compiler to enable use of built-in delay functions
 
-char* input;
+unsigned char* input = (char *) 0x20;
 char ch;
 
 int main (void)
@@ -61,9 +61,6 @@ int main (void)
 	setCursor(1,0); // Linha 2, posição horizontal 0
 	printLine("Vel: ___ RPM");
 	
-	setPosicaoDesejada(180);
-	//rotacionarParaDireita();
-	
 	while(1)
 	{
 		// Pega posição atual
@@ -88,20 +85,43 @@ int main (void)
 		setCursor(1,5);
 		printLine("200");
 		
-		// Entrada de dados pelo serial
-		ch = getChar();
-		if(ch == 0x0D) // Aguarda pelo enter
+		if(RCIF)
 		{
-			clearDisplay();
-			setCursor(0,0);
-			printLine(input);
-			input = NULL;
-		}
-		else
-		{
-			//input = input + ch;
-    		strcat(input, ch);
-    		printLine(input);
+			RCIF=0;
+			uint16_t value = 0;
+			for(int i =0; i<4; i++)
+			{
+				ch = getChar();
+				if(ch == 0x0D) // Aguarde pelo enter
+				{
+					if (value == 0)
+					{
+						value = 360;
+					}
+					setPosicaoDesejada(value);
+					rotacionarParaDireita();
+					setCursor(0,15);
+					sendCharToLCD(' ');
+					input = (char *) 0x20;
+					break;
+				}
+				else
+				{
+					if(i == 0)
+					{
+						value = value + ((int)ch - 48)*100;
+					}
+					else if(i == 1)
+					{
+						value = value + ((int)ch - 48)*10;
+					}
+					else if(i == 2)
+					{
+						value = value + ((int)ch - 48);
+					}
+				}
+				input[i] = ch;
+			}
 		}
 	}
 }
