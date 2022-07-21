@@ -4,7 +4,7 @@
 
 uint16_t posicaoAtual;
 uint16_t velocidade;
-uint16_t delayTime;
+unsigned int delayTime;
 uint16_t posicaoDesejada;	
 
 
@@ -52,6 +52,9 @@ void rotacionarParaDireita()
 {
 	float anguloCiclo = 4 * 0.18;
 	uint16_t ciclos = (int)(posicaoDesejada - posicaoAtual)/anguloCiclo;
+	if(posicaoDesejada == 0){
+		ciclos = (int)(360 - posicaoAtual)/anguloCiclo;
+	}
 	uint16_t i;
 	uint16_t j;
 	uint16_t k;
