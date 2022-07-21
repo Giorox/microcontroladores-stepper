@@ -1,11 +1,11 @@
-// Bibliotecas padrão
+// Bibliotecas padrï¿½o
 #include <xc.h>
 #include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
-// Headers proprietários
+// Headers proprietï¿½rios
 #include "lcd.h"
 #include "serial.h"
 #include "stepper.h"
@@ -33,37 +33,37 @@ char ch;
 
 int main (void)
 {
-	// Habilita a configuração de pinos analógicos como entradas digitais
+	// Habilita a configuraï¿½ï¿½o de pinos analï¿½gicos como entradas digitais
 	ANSELH=0x00;
 
-	// Configuração dos pinos para comunicação serial
-	// Configura o pino 6 como saída (TX) e o pino 7 como entrada (RX)
+	// Configuraï¿½ï¿½o dos pinos para comunicaï¿½ï¿½o serial
+	// Configura o pino 6 como saï¿½da (TX) e o pino 7 como entrada (RX)
 	TRISCbits.TRISC6 = 0;
 	TRISCbits.TRISC7 = 1;
 
-	// Configuração dos pinos para lidar com LCD
+	// Configuraï¿½ï¿½o dos pinos para lidar com LCD
 	// Bit RW is wired to GND in EasyPICV6
-	TRISB = 0x00; // Configura o PORTB inteiro como saída
-	PORTB = 0x00; // Zera os dados na saída do PORTB
+	TRISB = 0x00; // Configura o PORTB inteiro como saï¿½da
+	PORTB = 0x00; // Zera os dados na saï¿½da do PORTB
 
-	// Configuração dos pinos do motor de passo
-	// Configura todos os pinos como saída, usar TRISA-PORTA ou TRISD-PORTD
+	// Configuraï¿½ï¿½o dos pinos do motor de passo
+	// Configura todos os pinos como saï¿½da, usar TRISA-PORTA ou TRISD-PORTD
 	TRISD = 0x00;
 	PORTD = 0x00;
     
-	// Funções de inicialização
-    setupSerial(2400); // Configura a comunicação serial
+	// Funï¿½ï¿½es de inicializaï¿½ï¿½o
+    setupSerial(2400); // Configura a comunicaï¿½ï¿½o serial
 	setupDisplay(); // Inicializa o display LCD 16x2
 	setupStepper();// Inicializa o stepper do motor
 
 	clearDisplay();
 	printLine("PA: ___  PD: ___");
-	setCursor(1,0); // Linha 2, posição horizontal 0
+	setCursor(1,0); // Linha 2, posiï¿½ï¿½o horizontal 0
 	printLine("Vel: ___ RPM");
 	
 	while(1)
 	{
-		// Pega posição atual
+		// Pega posiï¿½ï¿½o atual
 		uint16_t posAtual = getPosicaoAtual();
 		uint16_t posDesejada = getPosicaoDesejada();
 		
@@ -73,11 +73,11 @@ int main (void)
 		char posDesejada_str[10];
 		sprintf(posDesejada_str, "%d", posDesejada);
 		
-		// Printa posição atual
+		// Printa posiï¿½ï¿½o atual
 		setCursor(0,4);
 		printLine(posAtual_str);
 		
-		// Printa Posição desejada
+		// Printa Posiï¿½ï¿½o desejada
 		setCursor(0,13);
 		printLine(posDesejada_str);
 		
@@ -94,12 +94,14 @@ int main (void)
 				ch = getChar();
 				if(ch == 0x0D) // Aguarde pelo enter
 				{
-					if (value == 0)
-					{
-						value = 360;
-					}
 					setPosicaoDesejada(value);
-					rotacionarParaDireita();
+					if((value - posAtual>=0){
+							rotacionarParaDireita();
+					}else{
+						rotacionarParaEsquerda();
+					
+					}
+					
 					setCursor(0,15);
 					sendCharToLCD(' ');
 					input = (char *) 0x20;
